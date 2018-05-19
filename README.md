@@ -11,7 +11,7 @@ RStudio project and supporting files for a quick start of the workshop.
     install.packages(c(
       "tidyverse", "feather", "gapminder", "leaflet", "mgcv", "nycflights13", "plotly",
       "shiny", "splines", "here", "xaringan", "rticles", "caTools", "bitops",
-      "RCurl", "RJSONIO", "PKI", "packrat", "rsconnect"
+      "RCurl", "RJSONIO", "PKI", "packrat", "rsconnect", "bookdown"
     ))
     ```
 
