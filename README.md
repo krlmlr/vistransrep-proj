@@ -15,8 +15,6 @@ RStudio project and supporting files for a quick start of the workshop.
     ))
     ```
 
-Alternatively, access the rstudio.cloud instance at https://rstudio.cloud/project/37553.
-
 ## Workshop material
 
 https://krlmlr.github.io/vistransrep
