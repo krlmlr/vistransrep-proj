@@ -1,0 +1,4 @@
+# delimited data with an initial comment
+col1;col2;col3
+1;;X
+2.5;b;
