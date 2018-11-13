@@ -1,3 +1,4 @@
+library(conflicted)
 library(readr)
 library(here)
 
@@ -16,3 +17,6 @@ example1 <- read_delim(here("data/example1.csv"),
                        ),
                        escape_double = FALSE,
                        trim_ws = TRUE)
+
+library(writexl)
+writexl::write_xlsx(example1, here("data/example1.xlsx"))
