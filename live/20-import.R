@@ -19,4 +19,7 @@ example1 <- read_delim(here("data/example1.csv"),
                        trim_ws = TRUE)
 
 library(writexl)
-writexl::write_xlsx(example1, here("data/example1.xlsx"))
+
+example1 %>%
+  mutate(date = Sys.Date(), time = Sys.time()) %>%
+  writexl::write_xlsx(here("data/example2.xlsx"))
