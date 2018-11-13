@@ -39,10 +39,23 @@ arrange(
   dep_delay
 )
 
-
 my_flights <-
   flights %>%
   filter(month == 11) %>%
   filter(day == 13) %>%
   filter(origin == "EWR") %>%
   arrange(dep_delay)
+
+flights %>%
+  filter(month == 11) %>%
+  filter(day == 13) %>%
+  filter(origin == "EWR") %>%
+  arrange(dep_delay) %>%
+  print(n = 100)
+
+flights %>%
+  filter(month == 11) %>%
+  filter(day == 13) %>%
+  filter(origin == "EWR") %>%
+  arrange(dep_delay) %>%
+  View()
