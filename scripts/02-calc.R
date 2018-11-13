@@ -3,6 +3,13 @@
 
 3 * 5
 
+# This is an R comment
+
+#' # This is Markdown!
+#'
+#' - Item 1
+#' - Item 2
+
 # Like a good one, too!
 # It knows operator precedence rules.
 3 + 4 * 5
