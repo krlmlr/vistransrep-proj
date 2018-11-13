@@ -17,7 +17,7 @@ arrange(
       month == 11,
       .data = flights
     )
-  ),
+  )
 )
 
 november_flights <- filter(flights, month == 11)
