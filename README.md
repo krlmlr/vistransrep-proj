@@ -9,7 +9,8 @@ RStudio project and supporting files for a quick start of the workshop.
 
     ```r
     install.packages(c(
-      "tidyverse", "nycflights13", "shiny", "here", "xaringan", "rticles", "conflicted"
+      "tidyverse", "nycflights13", "shiny", "here", "xaringan", "rticles", "bitops", 
+      "conflicted", "styler"
     ))
     ```
 
