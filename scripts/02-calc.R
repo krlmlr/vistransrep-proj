@@ -3,8 +3,8 @@
 
 3 * 5
 
-# Like a good one, too!
-# It knows operator precedence rules.
+#' Like a good one, too!
+#' It knows operator precedence rules.
 3 + 4 * 5
 
 (3 + 4) * 5
@@ -20,3 +20,7 @@ round(1.7)
 sin(pi)
 
 pmin(3, 2)
+
+1 +
+  2 *
+  3

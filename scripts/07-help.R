@@ -8,3 +8,4 @@ ggplot(
 
 near(sqrt(2) ^ 2, 2)
 
+example("geom_histogram", ask = FALSE)
