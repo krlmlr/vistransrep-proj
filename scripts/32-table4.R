@@ -14,7 +14,12 @@ table_population <-
   mutate(type = "population")
 table_population
 
-bind_rows(table_cases, table_population) %>%
+bind_rows(table_cases, table_population)
+
+bind_rows(cases = table4a, population = table4b, .id = "type")
+
+bind_rows(cases = table4a, population = table4b, .id = "type") %>%
   gather("year", "count", -country, -type) %>%
   select(country, year, type, count) %>%
   arrange(country, year, type)
+
