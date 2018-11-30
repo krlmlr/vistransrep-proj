@@ -20,6 +20,8 @@ table1 %>%
   knitr::kable()
 ```
 
+This table has `r nrow(table1)` rows.
+
 ## A table as DT
 
 ```{r table1-2, echo = FALSE}
@@ -55,9 +57,45 @@ plotly::ggplotly(
 )
 ```
 
-```{r pairs}
-d <- SharedData$new(iris)
-p <- GGally::ggpairs(d, aes(color = Species), columns = 1:4)
-highlight(ggplotly(p), on = "plotly_selected")
+## An interactive map
+
+```{r leaflet}
+library(leaflet)
+quakes %>% 
+  head(50) %>% 
+  leaflet() %>% 
+  addTiles() %>% 
+  addCircles()
 ```
 
+## An interactive map with Google Earth tiles
+
+Source: https://stackoverflow.com/a/43200650/946850
+
+```{r}
+library(leaflet)
+quakes %>% 
+  head(50) %>% 
+  leaflet() %>% 
+  addTiles(
+    urlTemplate = "https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G",
+    attribution = "Google"
+  ) %>% 
+  addCircles(popup = ~mag, color = "white")
+```
+
+## An interactive map with Google Maps tiles
+
+Source: https://stackoverflow.com/a/43200650/946850
+
+```{r}
+library(leaflet)
+quakes %>% 
+  head(50) %>% 
+  leaflet() %>% 
+  addTiles(
+    urlTemplate = "https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga",
+    attribution = "Google"
+  ) %>% 
+  addCircles(popup = ~mag, color = "red")
+```
