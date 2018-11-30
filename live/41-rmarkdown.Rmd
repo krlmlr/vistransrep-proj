@@ -3,11 +3,61 @@ title: "My first RMarkdown document"
 author: "Kirill Müller"
 date: "11/30/2018"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
+library(tidyverse)
+library(nycflights13)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+## A table
+
+```{r table1, echo = FALSE}
+table1 %>% 
+  knitr::kable()
+```
+
+## A table as DT
+
+```{r table1-2, echo = FALSE}
+airports %>% 
+  DT::datatable()
+```
+
+## A plot
+
+```{r plot-static}
+mpg %>% 
+  ggplot() +
+  geom_point(aes(displ, hwy))
+```
+
+
+## An interactive plot
+
+```{r plot-dynamic}
+p <-
+  mpg %>% 
+  ggplot() +
+  geom_point(aes(displ, hwy))
+
+plotly::ggplotly(p)
+```
+
+```{r plot-dynamic-surround}
+plotly::ggplotly(
+  mpg %>% 
+    ggplot() +
+    geom_point(aes(displ, hwy))
+)
+```
+
+```{r pairs}
+d <- SharedData$new(iris)
+p <- GGally::ggpairs(d, aes(color = Species), columns = 1:4)
+highlight(ggplotly(p), on = "plotly_selected")
+```
 

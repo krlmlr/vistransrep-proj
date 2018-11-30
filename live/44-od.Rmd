@@ -1,0 +1,31 @@
+---
+title: "44-od"
+author: "Kirill Müller"
+date: "11/30/2018"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse)
+library(here)
+
+load(here("data/od.rda"))
+
+getwd()
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## OD visualization
+
+```{r vis}
+p <- 
+  od %>% 
+  ggplot(aes(x = origin, y = dest, fill = n)) +
+  geom_tile() +
+  scale_x_discrete(name = "Origin airport") +
+  scale_y_discrete(name = "Destination airport") +
+  scale_fill_continuous(name = "Number of flights")
+
+plotly::ggplotly(p)
+```
