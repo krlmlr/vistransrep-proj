@@ -65,9 +65,9 @@ table2_inc %>%
 table2_inc %>%
   spread(year, count)
 
-# table2_inc %>%
-#   ... %>%
-#   ftable()
+table2 %>%
+  xtabs(formula = count ~ .) %>%
+  ftable()
 
 Titanic %>%
   ftable()
