@@ -1,0 +1,13 @@
+---
+title: "My first RMarkdown document"
+author: "Kirill Müller"
+date: "11/30/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
