@@ -69,5 +69,15 @@ table2 %>%
   xtabs(formula = count ~ .) %>%
   ftable()
 
+table2 %>%
+  xtabs(count ~ ., data = .) %>%
+  ftable()
+
+table2 %>%
+  xtabs(count ~ ., .) %>%
+  ftable()
+
+?magrittr::`%>%`
+
 Titanic %>%
   ftable()
