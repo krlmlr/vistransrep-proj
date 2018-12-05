@@ -16,4 +16,10 @@ flights %>%
   filter(carrier == "UA") %>%
   arrange(arr_delay)
 
-arrange(filter(flights, carrier == "UA"), arr_delay)
+arrange(
+  filter(
+    flights,
+    carrier == "UA"
+  ),
+  arr_delay
+)
