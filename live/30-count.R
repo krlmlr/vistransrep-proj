@@ -6,3 +6,6 @@ flights %>%
 
 flights %>%
   count(carrier)
+
+flights %>%
+  count(carrier, wt = distance)
