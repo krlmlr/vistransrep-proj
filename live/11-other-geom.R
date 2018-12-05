@@ -24,3 +24,9 @@ ggplot(
   mapping = aes(x = displ, y = hwy)
 ) +
   geom_text(label = "text")
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, label = class)
+) +
+  geom_text()
