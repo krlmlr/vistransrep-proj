@@ -24,4 +24,8 @@ flights %>%
       c(-Inf, quantile(distance, c(.25, .5, .75)), Inf)
     )
   ) %>%
-  select(distance_class, distance, everything())
+  transmute(
+    as.integer(distance_class),
+    distance_class,
+    distance
+  )
