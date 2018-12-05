@@ -19,8 +19,8 @@ flights %>%
 
 flights %>%
   mutate(
-    distance_class =
+    distance_class = cut(
+      distance,
       quantile(distance, c(.25, .5, .75))
     )
-  ) %>%
-  pull()
+  )
