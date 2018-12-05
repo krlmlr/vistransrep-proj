@@ -49,3 +49,8 @@ x <- filter(x, carrier == "UA")
 x <- filter(x, carrier == "UA")
 x <- filter(x, dep_time < 800)
 far_early_ua_flights <- x
+
+flights %>%
+  filter(month == 12) %>%
+  ggplot(aes(x = carrier)) +
+  geom_bar()
