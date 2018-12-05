@@ -17,3 +17,11 @@ ggplot(data = mpg) +
 ?geom_jitter
 
 ?geom_point
+
+
+ggplot(data = mpg) +
+  geom_bar(
+    mapping = aes(x = hwy, fill = drv),
+    binwidth = 1,
+    position = "dodge"
+  )
