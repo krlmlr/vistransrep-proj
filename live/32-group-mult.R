@@ -50,3 +50,4 @@ lags_per_origin
 lags_per_origin %>%
   group_by(origin) %>%
   slice(1:3)
+
