@@ -34,3 +34,8 @@ flights %>%
 
 flights %>%
   filter(distance %in% c(502, 872, 1389))
+
+flights %>%
+  mutate(
+    distance_rank = percent_rank(distance)
+  )
