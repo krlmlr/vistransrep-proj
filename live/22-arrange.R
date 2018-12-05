@@ -10,3 +10,11 @@ flights %>%
 flights %>%
   arrange(dep_time, sched_dep_time) %>%
   View()
+
+# install.packages("visdat")
+# install.packages("naniar")
+
+flights %>%
+  sample_frac(0.01) %>%
+  visdat::vis_miss()
+
