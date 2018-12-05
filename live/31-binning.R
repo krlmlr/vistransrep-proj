@@ -39,3 +39,8 @@ flights %>%
   mutate(distance_bin = ntile(distance, 4)) %>%
   group_by(distance_bin) %>%
   summarize(mean(distance), n())
+
+flights %>%
+  mutate(distance_bin = cut(percent_rank(distance), c(0, .25, .5, .75, 1), right = FALSE) %>%
+  group_by(distance_bin) %>%
+  summarize(mean(distance), n())
