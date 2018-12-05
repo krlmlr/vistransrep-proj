@@ -18,4 +18,8 @@ flights %>%
   summarize(n = sum(distance))
 
 flights %>%
+  group_by(carrier) %>%
+  summarize(n = n())
+
+flights %>%
   summarize(n = sum(distance))
