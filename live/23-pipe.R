@@ -23,3 +23,11 @@ arrange(
   ),
   arr_delay
 )
+
+flights %>%
+  filter(carrier == "UA") %>%
+  filter(dep_time < 800) %>%
+  filter(dest != "HNL") %>%
+  filter(distance > 2000) %>%
+  arrange(arr_delay)
+
