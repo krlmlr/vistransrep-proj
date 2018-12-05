@@ -31,3 +31,9 @@ flights %>%
 flights %>%
   mutate(dep_delay - arr_delay) %>%
   mutate(distance / air_time)
+
+flights %>%
+  transmute(
+    recovery = dep_delay - arr_delay,
+    mutate(speed = distance / air_time)
+  )
