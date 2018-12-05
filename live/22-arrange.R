@@ -23,3 +23,6 @@ flights %>%
 
 flights %>%
   arrange(desc(dep_time), sched_dep_time)
+
+flights %>%
+  arrange(dep_time - sched_dep_time)
