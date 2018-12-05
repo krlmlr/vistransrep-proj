@@ -11,3 +11,8 @@ flights %>%
 
 flights %>%
   group_by(carrier, origin)
+
+flights %>%
+  group_by(carrier, origin) %>%
+  summarize(n = sum(distance)) %>%
+  ungroup()
