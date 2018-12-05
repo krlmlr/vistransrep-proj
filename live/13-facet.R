@@ -6,3 +6,10 @@ ggplot(
 ) +
   geom_point() +
   facet_wrap(~ year)
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy)
+) +
+  geom_point() +
+  facet_grid(drv ~ year)
