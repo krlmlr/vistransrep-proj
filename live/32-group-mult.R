@@ -5,3 +5,6 @@ library(nycflights13)
 flights %>%
   count(carrier, origin)
 
+flights %>%
+  group_by(carrier, origin) %>%
+  summarize(n = sum(distance))
