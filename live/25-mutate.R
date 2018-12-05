@@ -18,3 +18,7 @@ flights %>%
     recovery = dep_delay - arr_delay,
     speed = distance / air_time
   )
+
+flights %>%
+  mutate(recovery = dep_delay - arr_delay) %>%
+  mutate(speed = distance / air_time)
