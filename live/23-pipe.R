@@ -8,4 +8,4 @@ flights %>%
 flights %>%
   arrange(dep_time, sched_dep_time)
 
-arrange(filter, dep_time, sched_dep_time)
+arrange(flights, dep_time, sched_dep_time)
