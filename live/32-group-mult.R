@@ -44,9 +44,4 @@ lags_per_origin <-
   ungroup() %>%
   mutate(diff_n = n - lag_n)
 
-flights %>%
-  count(origin, year, month, day) %>%
-  group_by(origin) %>%
-  mutate(lag_n = lag(n)) %>%
-  ungroup() %>%
-  mutate(diff_n = n - lag_n)
+View(lags_per_origin)
