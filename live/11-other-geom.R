@@ -37,3 +37,11 @@ ggplot(
 ) +
   geom_smooth()
 
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy)
+) +
+  geom_smooth() +
+  geom_point()
+
