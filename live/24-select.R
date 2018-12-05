@@ -12,3 +12,6 @@ flights %>%
 
 flights %>%
   rename(Jahr = year, Monat = month, Tag = day)
+
+flights %>%
+  select(starts_with())
