@@ -27,3 +27,7 @@ flights %>%
   mutate(cumul_distance = cumsum(distance)) %>%
   select(cumul_distance, distance, everything()) %>%
   View()
+
+flights %>%
+  mutate(dep_delay - arr_delay) %>%
+  mutate(distance / air_time)
