@@ -43,3 +43,9 @@ ua_flights <- filter(flights, carrier == "UA")
 non_hnl_ua_flights <- filter(ua_flights, carrier == "UA")
 #early_ua_flights <- filter(ua_flights, dep_time < 800)
 early_ua_flights <- filter(non_hnl_ua_flights, dep_time < 800)
+
+. <- flights
+. <- filter(flights, carrier == "UA")
+non_hnl_ua_flights <- filter(ua_flights, carrier == "UA")
+#early_ua_flights <- filter(ua_flights, dep_time < 800)
+early_ua_flights <- filter(non_hnl_ua_flights, dep_time < 800)
