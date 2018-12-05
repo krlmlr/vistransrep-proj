@@ -30,4 +30,4 @@ flights %>%
     distance
   ) %>%
   group_by(distance_class) %>%
-  summarize(mean(distance))
+  summarize(mean(distance), n())
