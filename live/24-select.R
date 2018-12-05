@@ -28,3 +28,10 @@ flights %>%
 flights %>%
   select(tailnum, everything()) %>%
   View()
+
+flights %>%
+  select(`Geplante Abflugzeit` = sched_dep_time)
+
+flights %>%
+  select(`Geplante Abflugzeit` = sched_dep_time) %>%
+  rename(sdt = `Geplante Abflugzeit`)
