@@ -9,3 +9,7 @@ flights %>%
 
 flights %>%
   count(carrier, wt = distance)
+
+flights %>%
+  group_by(carrier) %>%
+  summarize(n = sum(distance))
