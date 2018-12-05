@@ -24,3 +24,7 @@ flights %>%
 
 flights %>%
   select(tailnum, everything())
+
+flights %>%
+  select(tailnum, everything()) %>%
+  View()
