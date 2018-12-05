@@ -9,3 +9,6 @@ flights %>%
 
 flights %>%
   select(Jahr = year, Monat = month, Tag = day)
+
+flights %>%
+  rename(Jahr = year, Monat = month, Tag = day)
