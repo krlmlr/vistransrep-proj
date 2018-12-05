@@ -33,7 +33,8 @@ flights %>%
 
 flights %>%
   count(year, month, day) %>%
-  mutate(lag_n = lag(n))
+  mutate(lag_n = lag(n)) %>%
+  mutate(diff_n = n - lag_n)
 
 flights %>%
   count(year, month, day, origin)
