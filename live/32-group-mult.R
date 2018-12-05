@@ -32,8 +32,4 @@ flights %>%
   View()
 
 flights %>%
-  group_by(carrier, origin) %>%
-  mutate(total_distance = sum(distance)) %>%
-  ungroup() %>%
-  select(total_distance, distance, carrier, origin, everything()) %>%
-  View()
+  count(year, month, day, origin)
