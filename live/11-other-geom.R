@@ -69,3 +69,15 @@ ggplot(
 ) +
   geom_smooth() +
   geom_point(mapping = aes(color = class))
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy)
+) +
+  geom_histogram()
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ)
+) +
+  geom_histogram()
