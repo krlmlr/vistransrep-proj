@@ -7,3 +7,5 @@ ggplot(
   geom_point()
 
 mpg
+
+View(mpg)
