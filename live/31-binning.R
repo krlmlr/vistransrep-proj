@@ -21,6 +21,7 @@ flights %>%
   mutate(
     distance_class = cut(
       distance,
-      quantile(distance, c(.25, .5, .75))
+      c(-Inf, quantile(distance, c(.25, .5, .75)), Inf)
     )
-  )
+  ) %>%
+  select(distance_class, distance, everything())
