@@ -3,3 +3,6 @@ library(nycflights13)
 
 flights %>%
   count()
+
+flights %>%
+  count()
