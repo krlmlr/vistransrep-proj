@@ -31,3 +31,6 @@ flights %>%
   ) %>%
   group_by(distance_class) %>%
   summarize(mean(distance), n())
+
+flights %>%
+  filter(distance %in% c(502, 872, 1389))
