@@ -80,4 +80,5 @@ ggplot(
   data = mpg,
   mapping = aes(x = displ)
 ) +
-  geom_histogram()
+  geom_histogram() +
+  geom_density(color = "blue")
