@@ -39,7 +39,6 @@ flights %>%
 flights %>%
   count(origin, year, month, day) %>%
   group_by(origin) %>%
-  mutate(lag_n = lag(n, default = NA)) %>%
+  mutate(lag_n = lag(n)) %>%
   ungroup() %>%
-  mutate(diff_n = n - lag_n) %>%
-  View()
+  mutate(diff_n = n - lag_n)
