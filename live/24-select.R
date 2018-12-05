@@ -18,3 +18,6 @@ flights %>%
 
 flights %>%
   select(starts_with("arr_"), starts_with("dep_"))
+
+flights %>%
+  select(-year, -month, -day)
