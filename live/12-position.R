@@ -30,3 +30,9 @@ ggplot(data = mpg) +
     mapping = aes(x = class, fill = drv),
     position = "dodge"
   )
+
+ggplot(data = mpg) +
+  geom_bar(
+    mapping = aes(x = class, fill = drv),
+    position = "dodge"
+  )
