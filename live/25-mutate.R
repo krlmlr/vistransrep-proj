@@ -24,4 +24,6 @@ flights %>%
   mutate(speed = distance / air_time)
 
 flights %>%
-  mutate(cumul_distance = cumsum(distance))
+  mutate(cumul_distance = cumsum(distance)) %>%
+  select(cumul_distance, distance, everything()) %>%
+  View()
