@@ -32,4 +32,7 @@ flights %>%
   View()
 
 flights %>%
+  count(year, month, day)
+
+flights %>%
   count(year, month, day, origin)
