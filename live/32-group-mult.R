@@ -43,5 +43,3 @@ lags_per_origin <-
   mutate(lag_n = lag(n)) %>%
   ungroup() %>%
   mutate(diff_n = n - lag_n)
-
-View(lags_per_origin)
