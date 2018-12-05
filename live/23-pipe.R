@@ -31,3 +31,11 @@ flights %>%
   filter(distance > 2000) %>%
   arrange(arr_delay)
 
+far_early_ua_flights <-
+  flights %>%
+  filter(carrier == "UA") %>%
+  filter(dep_time < 800) %>%
+  filter(dest != "HNL") %>%
+  filter(distance > 2000) %>%
+  arrange(arr_delay)
+
