@@ -21,7 +21,6 @@ ggplot(data = mpg) +
 
 ggplot(data = mpg) +
   geom_bar(
-    mapping = aes(x = hwy, fill = drv),
-    binwidth = 1,
+    mapping = aes(x = class, fill = drv),
     position = "dodge"
   )
