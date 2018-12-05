@@ -81,3 +81,9 @@ ggplot(
   mapping = aes(x = displ)
 ) +
   geom_histogram()
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = drv, y = hwy)
+) +
+  geom_boxplot()
