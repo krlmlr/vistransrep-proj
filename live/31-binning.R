@@ -36,9 +36,5 @@ flights %>%
   filter(distance %in% c(502, 872, 1389))
 
 flights %>%
-  mutate(
-    distance_rank = percent_rank(distance),
-    distance_bin = cut(distance_rank, c(0, .25, .5, .75, 1), right = FALSE)
-  ) %>%
-  select(distance_rank, distance, everything()) %>%
-  count(distance_bin)
+  mutate(distance_bin = ntile(distance, 4)) %>%
+  count(distance_rank)
