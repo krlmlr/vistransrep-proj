@@ -26,3 +26,6 @@ flights %>%
 
 flights %>%
   arrange(dep_time - sched_dep_time)
+
+tibble(a = c(TRUE, FALSE)) %>%
+  arrange(a)
