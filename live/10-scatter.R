@@ -1,5 +1,2 @@
 library(tidyverse)
 
-ggplot(
-
-)
