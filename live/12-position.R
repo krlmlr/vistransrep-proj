@@ -13,3 +13,7 @@ ggplot(data = mpg) +
     binwidth = 1,
     position = "dodge"
   )
+
+?geom_jitter
+
+?geom_point
