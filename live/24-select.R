@@ -21,3 +21,6 @@ flights %>%
 
 flights %>%
   select(-year, -month, -day)
+
+flights %>%
+  select(tailnum, everything())
