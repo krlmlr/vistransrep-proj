@@ -54,3 +54,15 @@ ggplot(
   mapping = aes(x = displ, y = hwy)
 ) +
   geom_point(color = class)
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy)
+) +
+  geom_point(color = "darkblue")
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy)
+) +
+  geom_point(color = "#123456")
