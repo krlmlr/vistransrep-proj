@@ -42,3 +42,9 @@ ggplot(
     color = "blue",
     shape = 5
   )
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = "blue")
+) +
+  geom_point()
