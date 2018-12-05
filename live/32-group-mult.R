@@ -23,3 +23,7 @@ flights %>%
   ungroup() %>%
   arrange(desc(n)) %>%
   filter(n > 100000)
+
+flights %>%
+  group_by(carrier, origin) %>%
+  summarize(total_distance = sum(distance)) %>%
