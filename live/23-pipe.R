@@ -39,3 +39,4 @@ far_early_ua_flights <-
   filter(distance > 2000) %>%
   arrange(arr_delay)
 
+ua_flights <- filter(flights, carrier == "UA")
