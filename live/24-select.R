@@ -3,3 +3,6 @@ library(nycflights13)
 
 flights %>%
   select(year, month, day)
+
+flights %>%
+  select(-year, -month, -day)
