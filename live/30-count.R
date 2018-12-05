@@ -5,4 +5,4 @@ flights %>%
   count()
 
 flights %>%
-  count()
+  count(carrier)
