@@ -2,6 +2,6 @@ library(tidyverse)
 
 ggplot(
   data = mpg,
-  mapping = aes()
+  mapping = aes(x = displ, y = hwy)
 ) +
   geom_point()
