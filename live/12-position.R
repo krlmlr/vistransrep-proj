@@ -22,5 +22,11 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_bar(
     mapping = aes(x = class, fill = drv),
+    position = "fill"
+  )
+
+ggplot(data = mpg) +
+  geom_bar(
+    mapping = aes(x = class, fill = drv),
     position = "dodge"
   )
