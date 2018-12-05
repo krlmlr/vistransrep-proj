@@ -12,3 +12,8 @@ flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   select(recovery, everything()) %>%
   View()
+
+flights %>%
+  mutate(
+    recovery = dep_delay - arr_delay,
+    speed = distance /
