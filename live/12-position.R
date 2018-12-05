@@ -34,5 +34,5 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_bar(
     mapping = aes(x = class, fill = drv),
-    position = "dodge"
+    position = position_dodge(preserve = "single")
   )
