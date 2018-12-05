@@ -54,3 +54,7 @@ flights %>%
   filter(month == 12) %>%
   ggplot(aes(x = carrier)) +
   geom_bar()
+
+flights %>%
+  ggplot(aes(x = carrier)) +
+  geom_bar()
