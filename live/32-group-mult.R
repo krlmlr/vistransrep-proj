@@ -41,6 +41,7 @@ lags_per_origin <-
   count(origin, year, month, day) %>%
   group_by(origin) %>%
   mutate(lag_n = lag(n)) %>%
+  mutate(cumsum_n = cumsum(n)) %>%
   ungroup() %>%
   mutate(diff_n = n - lag_n)
 
