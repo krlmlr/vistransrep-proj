@@ -22,3 +22,6 @@ flights %>%
 flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   mutate(speed = distance / air_time)
+
+flights %>%
+  mutate(cumul_distance = cumsum(distance))
