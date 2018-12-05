@@ -40,4 +40,4 @@ far_early_ua_flights <-
   arrange(arr_delay)
 
 ua_flights <- filter(flights, carrier == "UA")
-
+early_ua_flights <- filter(ua_flights, dep_time < 800)
