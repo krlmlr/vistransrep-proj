@@ -45,3 +45,7 @@ lags_per_origin <-
   mutate(diff_n = n - lag_n)
 
 lags_per_origin
+
+lags_per_origin %>%
+  group_by(origin) %>%
+  slice(1:3)
