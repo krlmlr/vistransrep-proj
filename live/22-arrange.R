@@ -18,3 +18,8 @@ flights %>%
   sample_frac(0.01) %>%
   visdat::vis_miss()
 
+flights %>%
+  arrange(desc(dep_time))
+
+flights %>%
+  arrange(desc(dep_time), sched_dep_time)
