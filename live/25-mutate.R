@@ -7,3 +7,8 @@ flights %>%
 flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   select(recovery, everything())
+
+flights %>%
+  mutate(recovery = dep_delay - arr_delay) %>%
+  select(recovery, everything()) %>%
+  View()
