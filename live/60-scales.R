@@ -33,6 +33,6 @@ mpg %>%
   my_color_scale
 
 mpg %>%
-  ggplot(aes(x = drv)) +
+  ggplot(aes(x = drv, fill = class)) +
   geom_bar() +
-  scale_x_discrete("Drivetrain")
+  scale_x_discrete("Drivetrain") +
