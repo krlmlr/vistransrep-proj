@@ -1,7 +1,8 @@
 library(tidyverse)
 
 force_left_join <- function(x, y, by) {
-  names_to_remove <-
+  names_to_keep <-
+    intersect(names(x), names(y))
 
 }
 
