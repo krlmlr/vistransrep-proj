@@ -33,7 +33,7 @@ mpg %>%
   my_color_scale
 
 my_fill_scale <-
-  scale_color_brewer(
+  scale_fill_brewer(
     "Car class",
     palette = "Set1",
     labels = c("Two-seater", "Compact", "Mid-size")
@@ -43,4 +43,4 @@ mpg %>%
   ggplot(aes(x = drv, fill = class)) +
   geom_bar() +
   scale_x_discrete("Drivetrain") +
-  scale_fill_
+  my_fill_scale
