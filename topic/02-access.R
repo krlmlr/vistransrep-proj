@@ -5,7 +5,10 @@ force_left_join <- function(x, y, by) {
     c(by, setdiff(names(y), names(x)))
 
   if (length(names_to_keep) != length(names(y))) {
-    message("Removing columns: ", paste(setdiff(names(y), names_to_keep), collapse = ", ")
+    message(
+      "Removing columns: ",
+      paste(setdiff(names(y), names_to_keep), collapse = ", ")
+    )
     y_keep <-
       y %>%
       select(!!!names_to_keep)
