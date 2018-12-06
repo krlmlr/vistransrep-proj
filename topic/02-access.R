@@ -4,6 +4,10 @@ force_left_join <- function(x, y, by) {
   names_to_keep <-
     c(by, setdiff(names(y), names(x)))
 
+  y_keep <-
+    y %>%
+    select(!!!names_to_keep)
+
 }
 
 mpg_topics <- function(...) {
