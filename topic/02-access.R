@@ -4,9 +4,13 @@ force_left_join <- function(x, y, by) {
   names_to_keep <-
     c(by, setdiff(names(y), names(x)))
 
+  if (length(names_to_keep) != length(names)) {
   y_keep <-
     y %>%
     select(!!!names_to_keep)
+  } else {
+    y_keep <- y
+  }
 
   left_join(x, y, by)
 }
