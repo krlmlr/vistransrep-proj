@@ -47,3 +47,5 @@ mpg %>%
     plot.subtitle = element_text(hjust = 0.5)
   ) +
   theme_minimal()
+
+ggplot2::theme_set()
