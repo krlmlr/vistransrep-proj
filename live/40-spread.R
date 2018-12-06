@@ -41,3 +41,8 @@ table1 %>%
   group_by(country) %>%
   mutate(lag_cases = lag(cases)) %>%
   gather("type", "count", -country, -year)
+
+table1 %>%
+  group_by(country) %>%
+  mutate(lag_cases = lag(cases)) %>%
+  gather("type", "count", cases:lag_cases)
