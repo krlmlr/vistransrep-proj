@@ -5,7 +5,7 @@ mpg_topics <- function(...) {
   root <- "/cloud/project/topic"
 
   if (length(files) == 0) {
-    dir(root, pattern = "\\.rds$", full.names = TRUE)
+    paths <- dir(root, pattern = "\\.rds$", full.names = TRUE)
   } else {
     paths <- file.path(
       root,
