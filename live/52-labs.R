@@ -64,3 +64,8 @@ mpg %>%
     title = "Plot title",
     subtitle = "Subtitle"
   )
+
+mpg %>%
+  ggplot(aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  theme(legend.position = "bottom")
