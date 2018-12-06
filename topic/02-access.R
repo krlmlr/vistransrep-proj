@@ -16,8 +16,9 @@ mpg_topics <- function(...) {
   datasets <-
     map(paths, readRDS)
 
-  reduce(datasets, left_join)
+  reduce(datasets, left_join, by = "id")
 }
 
 mpg_topics("socio")
 mpg_topics("rest")
+mpg_topics("rest", "socio")
