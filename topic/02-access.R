@@ -5,14 +5,14 @@ force_left_join <- function(x, y, by) {
     c(by, setdiff(names(y), names(x)))
 
   if (length(names_to_keep) != length(names)) {
-  y_keep <-
-    y %>%
-    select(!!!names_to_keep)
+    y_keep <-
+      y %>%
+      select(!!!names_to_keep)
   } else {
     y_keep <- y
   }
 
-  left_join(x, y, by)
+  left_join(x, y_keep, by)
 }
 
 mpg_topics <- function(...) {
