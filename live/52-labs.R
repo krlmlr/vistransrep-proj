@@ -1,3 +1,4 @@
+library(tidyverse)
 
 mpg %>%
   ggplot(aes(x = class, y = hwy)) +
