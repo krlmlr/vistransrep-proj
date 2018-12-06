@@ -21,7 +21,10 @@ table1 %>%
   gather("type", "count", cases, population)
 
 table1 %>%
-  gather(type, count, cases, population)
+  gather("type", "count", cases, population) %>%
+  arrange(country, year, type)
+
+table2
 
 table2 %>%
   spread(type, count)
