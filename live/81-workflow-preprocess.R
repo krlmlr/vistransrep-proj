@@ -20,4 +20,7 @@ verbose_destinations_by_carrier <-
 
 verbose_destinations_by_carrier
 
-save(verbose_destinations_by_carrier, file = "data/81-workflow.rda")
+save(
+  verbose_destinations_by_carrier,
+  file = "data/81-workflow.rda"
+)
