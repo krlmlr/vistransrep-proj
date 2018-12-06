@@ -38,3 +38,10 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 - Bullets
 - More bullets
 
+```{r ftable}
+table2 %>%
+  xtabs(formula = count ~ .) %>%
+  ftable() %>%
+  memisc::format_html()
+```
+
