@@ -19,3 +19,5 @@ verbose_destinations_by_carrier <-
   select(-dest)
 
 verbose_destinations_by_carrier
+
+save(verbose_destinations_by_carrier, file = "data/81-workflow.rda")
