@@ -35,3 +35,10 @@ table1 %>%
     "rate",
     cases, population
   )
+
+table1 %>%
+  unite(
+    "rate",
+    cases, population,
+    sep = "/"
+  )
