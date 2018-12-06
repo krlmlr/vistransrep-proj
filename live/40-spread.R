@@ -51,4 +51,10 @@ table1 %>%
   group_by(country) %>%
   mutate(lag_cases = lag(cases)) %>%
   gather("type", "count", -country, -year) %>%
-  spread()
+  spread(type, count)
+
+table1 %>%
+  group_by(country) %>%
+  mutate(lag_cases = lag(cases)) %>%
+  gather("type", "count", -country, -year, factor_key = TRUE) %>%
+  spread(type, count)
