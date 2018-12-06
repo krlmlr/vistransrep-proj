@@ -11,3 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## My heat map
+
+```{r}
+verbose_destinations_by_carrier %>%
+  ggplot() +
+  geom_raster(aes(airport_name, carrier_name, fill = n)) +
+  ggpubr::rotate_x_text()
+```
