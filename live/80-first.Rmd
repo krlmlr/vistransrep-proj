@@ -9,7 +9,6 @@ editor_options:
 
 ```{r setup, include=FALSE}
 library(tidyverse)
-library(DT)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
