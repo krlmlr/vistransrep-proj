@@ -47,3 +47,8 @@ table2 %>%
   knitr::asis_output()
 ```
 
+
+```{r dt}
+
+```
+
