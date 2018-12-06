@@ -1,6 +1,8 @@
 library(tidyverse)
 
 force_left_join <- function(x, y, by) {
+  names_to_remove <-
+
 }
 
 mpg_topics <- function(...) {
