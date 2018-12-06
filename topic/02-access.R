@@ -2,6 +2,9 @@ library(tidyverse)
 
 mpg_topics <- function(...) {
   files <- c(...)
+  if (length(files) == 0) {
+  }
+
   paths <- file.path(
     "/cloud/project/topic",
     paste0("mpg-", files, ".rds")
