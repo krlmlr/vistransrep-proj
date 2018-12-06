@@ -44,3 +44,9 @@ mpg %>%
   geom_bar() +
   scale_x_discrete("Drivetrain") +
   my_fill_scale
+
+mpg %>%
+  ggplot(aes(x = displ, y = hwy)) +
+  geom_point() +
+  scale_x_sqrt("Displacement") +
+  scale_y_continuous("Highway fuel consumption\n[miles per gallon]")
