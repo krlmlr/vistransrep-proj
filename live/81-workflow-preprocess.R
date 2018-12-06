@@ -1,4 +1,5 @@
 library(tidyverse)
+library(nycflights13)
 
 airline_names <-
   airlines %>%
@@ -16,3 +17,5 @@ verbose_destinations_by_carrier <-
   select(-carrier) %>%
   left_join(dest_airport_names, by = "dest") %>%
   select(-dest)
+
+verbose_destinations_by_carrier
