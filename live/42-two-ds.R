@@ -12,4 +12,4 @@ table4b_long <-
   table4b %>%
   gather(year, populaton, -country)
 
-left_join(table4a, table4b)
+left_join(table4a_long, table4b_long)
