@@ -9,7 +9,7 @@ output: html_document
 library(tidyverse)
 library(here)
 knitr::opts_chunk$set(echo = TRUE)
-load("../data/81-workflow.rda")
+load(here("data/81-workflow.rda"))
 ```
 
 ## My heat map
