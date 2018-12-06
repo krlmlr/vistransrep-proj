@@ -46,4 +46,5 @@ table1 %>%
 table2 %>%
   unite(
     "key",
+    type, year
   )
