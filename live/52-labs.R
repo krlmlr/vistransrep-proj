@@ -17,7 +17,6 @@ mpg %>%
     plot.subtitle = element_text(hjust = 0.5)
   )
 
-
 mpg %>%
   ggplot(aes(x = displ, y = hwy, color = class)) +
   geom_point() +
