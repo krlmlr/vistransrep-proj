@@ -11,3 +11,10 @@ table3 %>%
     into = c("cases", "population"),
     sep = "[^0-9]"
   )
+
+table3 %>%
+  separate(
+    rate,
+    into = c("cases", "population"),
+    sep = "/"
+  )
