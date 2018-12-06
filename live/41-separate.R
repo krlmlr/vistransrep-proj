@@ -28,4 +28,10 @@ table3 %>%
   )
 
 table1 %>%
-  unite()
+  unite("rate", cases, population)
+
+table1 %>%
+  unite(
+    "rate",
+    cases, population
+  )
