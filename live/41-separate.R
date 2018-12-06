@@ -48,3 +48,10 @@ table2 %>%
     "key",
     type, year
   )
+
+table2 %>%
+  unite(
+    "key",
+    type, year
+  ) %>%
+  spread()
