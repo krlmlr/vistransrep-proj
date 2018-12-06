@@ -12,8 +12,7 @@ table1 %>%
   facet_wrap(~ country)
 
 table2 %>%
-  ggplot(aes()) +
   ggplot(aes(x = year, y = count)) +
   geom_line() +
   geom_point() +
-  facet_grid(type ~ country)
+  facet_grid(type ~ country, scales = "free_y")
