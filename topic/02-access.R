@@ -20,3 +20,4 @@ mpg_topics <- function(...) {
 }
 
 mpg_topics("socio")
+mpg_topics("rest")
