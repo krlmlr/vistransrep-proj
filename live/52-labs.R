@@ -27,13 +27,8 @@ mpg %>%
   geom_point() +
   theme_minimal() +
   labs(
-    x = "Displacement",
-    y = "Highway",
-    color = "Car class",
     title = "Plot title",
-    subtitle = "Subtitle",
-    caption = "Caption",
-    tag = "Tag"
+    subtitle = "Subtitle"
   ) +
   theme(
     plot.title = element_text(hjust = 0.5),
