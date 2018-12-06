@@ -3,6 +3,8 @@ title: "My title"
 author: "Kirill Müller"
 date: "6 12 2018"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
