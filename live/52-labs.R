@@ -34,3 +34,16 @@ mpg %>%
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5)
   )
+
+mpg %>%
+  ggplot(aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  labs(
+    title = "Plot title",
+    subtitle = "Subtitle"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
+  ) +
+  theme_minimal()
