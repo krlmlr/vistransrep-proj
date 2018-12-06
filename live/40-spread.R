@@ -31,3 +31,7 @@ table2 %>%
 
 table1 %>%
   mutate("new_column" = 1)
+
+table1 %>%
+  mutate(lag_cases = lag(cases))
+
