@@ -20,5 +20,11 @@ table2 %>%
 table1 %>%
   gather("type", "count", cases, population)
 
+table1 %>%
+  gather(type, count, cases, population)
+
 table2 %>%
   spread(type, count)
+
+table1 %>%
+  mutate("new_column" = 1)
