@@ -1,5 +1,5 @@
 library(tidyverse)
 
 mpg_topics <- function(...) {
-  paths <- file.path()
+  paths <- file.path("/cloud/project/topic", c(...))
 }
