@@ -54,3 +54,8 @@ iris %>%
   DT::datatable()
 ```
 
+```{r dt}
+iris %>% 
+  DT::datatable()
+```
+
