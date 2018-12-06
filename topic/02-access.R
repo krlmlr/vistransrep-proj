@@ -24,6 +24,7 @@ mpg_topics <- function(...) {
   root <- "/cloud/project/topic"
 
   if (length(files) == 0) {
+    message("Loading all topics")
     paths <- dir(root, pattern = "\\.rds$", full.names = TRUE)
   } else {
     paths <- file.path(
