@@ -17,3 +17,5 @@ table2 %>%
   geom_point() +
   facet_grid(type ~ country, scales = "free_y")
 
+table1 %>%
+  gather("type", "count", cases, population)
