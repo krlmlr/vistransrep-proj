@@ -55,4 +55,12 @@ my_theme <-
     plot.subtitle = element_text(hjust = 0.5)
   )
 
-ggplot2::theme_set()
+ggplot2::theme_set(my_theme)
+
+mpg %>%
+  ggplot(aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  labs(
+    title = "Plot title",
+    subtitle = "Subtitle"
+  )
