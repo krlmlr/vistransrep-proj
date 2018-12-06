@@ -13,4 +13,5 @@ mpg_rest <-
   mpg_id %>%
   select(-2:-5, -class)
 
-save
+saveRDS(here("topic/mpg-socio.rds"))
+saveRDS(here("topic/mpg-rest.rds"))
