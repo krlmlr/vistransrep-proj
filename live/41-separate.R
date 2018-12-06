@@ -45,4 +45,5 @@ table1 %>%
 
 table2 %>%
   unite(
+    "key",
   )
