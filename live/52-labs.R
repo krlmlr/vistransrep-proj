@@ -11,4 +11,8 @@ mpg %>%
     subtitle = "Subtitle",
     caption = "Caption",
     tag = "Tag"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
   )
