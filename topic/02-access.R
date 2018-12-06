@@ -22,3 +22,4 @@ mpg_topics <- function(...) {
 mpg_topics("socio")
 mpg_topics("rest")
 mpg_topics("rest", "socio")
+mpg_topics()
