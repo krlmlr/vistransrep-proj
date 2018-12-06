@@ -8,6 +8,7 @@ force_left_join <- function(x, y, by) {
     y %>%
     select(!!!names_to_keep)
 
+  left_join(x, y, by)
 }
 
 mpg_topics <- function(...) {
@@ -26,7 +27,7 @@ mpg_topics <- function(...) {
   datasets <-
     map(paths, readRDS)
 
-  reduce(datasets, left_join, by = "id")
+  reduce(datasets, force_left_join, by = "id")
 }
 
 mpg_topics("socio")
