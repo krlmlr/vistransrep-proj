@@ -70,3 +70,12 @@ table2 %>%
   ) %>%
   spread(key, count)
 
+table1 %>%
+  mutate(x = letters[1:6]) %>%
+  gather("type", "???", -country, -year) %>%
+  spread(type, `???`)
+
+table1 %>%
+  mutate(x = letters[1:6]) %>%
+  gather("type", "???", -country, -year) %>%
+  spread(type, `???`, convert = TRUE)
