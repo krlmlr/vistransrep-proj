@@ -4,8 +4,9 @@ mpg %>%
   ggplot(aes(x = displ, y = hwy, color = class)) +
   geom_point() +
   labs(
-    x = "Car class",
-    y = "Highway
+    x = "Displacement",
+    y = "Highway",
+    color = "Car class",
     title = "Plot title",
     subtitle = "Subtitle",
     caption = "Caption",
