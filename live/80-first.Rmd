@@ -53,8 +53,11 @@ iris %>%
   DT::datatable()
 ```
 
-```{r dt}
-iris %>% 
+```{r plotly}
+p <-
+  mpg %>%
+  ggplot(aes(x = drv, fill = class)) +
+  geom_bar() +
   DT::datatable()
 ```
 
