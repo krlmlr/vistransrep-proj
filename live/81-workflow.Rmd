@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(here)
 knitr::opts_chunk$set(echo = TRUE)
 load("../data/81-workflow.rda")
 ```
