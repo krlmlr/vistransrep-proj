@@ -62,3 +62,11 @@ table2 %>%
     country, type, year
   ) %>%
   spread(key, count)
+
+table2 %>%
+  unite(
+    "key",
+    country, type, year
+  ) %>%
+  spread(key, count)
+
