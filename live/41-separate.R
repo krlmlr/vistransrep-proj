@@ -26,3 +26,6 @@ table3 %>%
     sep = "/",
     convert = TRUE
   )
+
+table1 %>%
+  unite()
