@@ -21,6 +21,9 @@ flights %>%
   select(1:3, carrier) %>%
   left_join(airlines, by = "carrier")
 
+carrier_date <-
+  airlines %>%
+  select(1:3, carrier)
+
 airlines %>%
-  select(1:3, carrier) %>%
-  left_join(airlines)
+  right_join()
