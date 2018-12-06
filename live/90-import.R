@@ -16,4 +16,4 @@ example2 <- readr::read_delim(
   comment = "#",
   trim_ws = TRUE
 )
-View(example2)
+example2
