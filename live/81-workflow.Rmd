@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE)
-load("data/81-workflow.rda")
+load("../data/81-workflow.rda")
 ```
 
 ## My heat map
