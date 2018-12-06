@@ -1,6 +1,6 @@
 library(tidyverse)
 
-force_left_join <- function(x, y) {
+force_left_join <- function(x, y, by) {
 }
 
 mpg_topics <- function(...) {
