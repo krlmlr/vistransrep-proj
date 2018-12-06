@@ -50,10 +50,6 @@ mpg %>%
 
 my_theme <-
   theme_minimal() +
-  labs(
-    title = "Plot title",
-    subtitle = "Subtitle"
-  ) +
   theme(
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5)
