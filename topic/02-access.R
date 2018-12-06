@@ -1,5 +1,8 @@
 library(tidyverse)
 
+force_left_join <- function(x, y) {
+}
+
 mpg_topics <- function(...) {
   files <- c(...)
   root <- "/cloud/project/topic"
