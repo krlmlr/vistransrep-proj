@@ -19,3 +19,6 @@ table2 %>%
 
 table1 %>%
   gather("type", "count", cases, population)
+
+table2 %>%
+  spread(type, count)
