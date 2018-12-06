@@ -2,7 +2,7 @@
 title: "My title"
 author: "Kirill Müller"
 date: "6 12 2018"
-output: pdf_document
+output: html_document
 editor_options: 
   chunk_output_type: console
 ---
@@ -39,7 +39,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 - Bullets
 - More bullets
 
-```{r ftable}
+```{r ftable, results = "asis"}
 table2 %>%
   xtabs(formula = count ~ .) %>%
   ftable() %>%
