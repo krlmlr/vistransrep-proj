@@ -42,3 +42,7 @@ table1 %>%
     cases, population,
     sep = "/"
   )
+
+table2 %>%
+  unite(
+  )
