@@ -6,8 +6,9 @@ mpg_id <-
 
 mpg_socio <-
   mpg_id %>%
-  select(id, 2:5)
+  select(id, 2:5, class)
 
 mpg_rest <-
   mpg_id %>%
-  select(id, 2:5)
+  select(-2:-5, -class)
+
