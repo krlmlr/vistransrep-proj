@@ -20,3 +20,8 @@ mpg %>%
   ggplot(aes(x = class, y = hwy)) +
   geom_boxplot() +
   scale_y_log10()
+
+mpg %>%
+  ggplot(aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  coord_flip()
