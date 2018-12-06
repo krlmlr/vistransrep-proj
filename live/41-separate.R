@@ -23,5 +23,6 @@ table3 %>%
   separate(
     rate,
     into = c("cases", "population"),
-    sep = "/"
+    sep = "/",
+    convert = TRUE
   )
