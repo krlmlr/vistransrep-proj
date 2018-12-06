@@ -39,7 +39,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 - Bullets
 - More bullets
 
-```{r ftable, results = "asis"}
+```{r ftable, results = "markup"}
 table2 %>%
   xtabs(formula = count ~ .) %>%
   ftable() %>%
