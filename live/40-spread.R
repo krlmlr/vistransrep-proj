@@ -16,3 +16,4 @@ table2 %>%
   geom_line() +
   geom_point() +
   facet_grid(type ~ country, scales = "free_y")
+
