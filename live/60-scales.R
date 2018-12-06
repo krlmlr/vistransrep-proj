@@ -31,3 +31,8 @@ mpg %>%
   scale_x_continuous("Displacement") +
   scale_y_continuous("Highway fuel consumption\n[miles per gallon]") +
   my_color_scale
+
+mpg %>%
+  ggplot(aes(x = drv)) +
+  geom_bar() +
+  scale_x_discrete("Drivetrain")
