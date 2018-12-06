@@ -6,3 +6,12 @@ mpg %>%
   scale_x_continuous("Displacement") +
   scale_y_continuous("Highway fuel consumption\n[miles per gallon]") +
   coord_trans(x = "sqrt")
+
+mpg %>%
+  ggplot(aes(x = class, y = hwy)) +
+  geom_boxplot()
+
+mpg %>%
+  ggplot(aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  coord_trans(y = "log10")
