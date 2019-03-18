@@ -28,4 +28,4 @@ If you can't install RStudio on your local machine, or experience problems, you 
 
 ## Workshop material
 
-https://krlmlr.github.io/vistransrep/2019-04-zhr
+To be announced.
