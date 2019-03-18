@@ -5,6 +5,9 @@ RStudio project and supporting files for a quick start of the workshop.
 ## Installation
 
 1. RStudio in the most recent version
+
+    https://www.rstudio.com/products/rstudio/download/#download
+
 2. R packages. Copy the following code at once into RStudio's "Console" pane and press "Enter".
 
     ```r
