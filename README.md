@@ -2,7 +2,7 @@
 
 RStudio project and supporting files for a quick start of the workshop.
 
-## Installation
+## Required software
 
 1. R, preferably in the most recent version
 
@@ -22,7 +22,7 @@ RStudio project and supporting files for a quick start of the workshop.
     ))
     ```
 
-## Cloud instance
+## Alternative: Cloud instance
 
 If you can't install RStudio on your local machine, or experience problems, you can always use the rstudio.cloud instance.
 
