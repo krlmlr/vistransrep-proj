@@ -18,4 +18,4 @@ RStudio project and supporting files for a quick start of the workshop.
 
 ## Workshop material
 
-https://krlmlr.github.io/vistransrep
+https://krlmlr.github.io/vistransrep/2019-04-zhr
