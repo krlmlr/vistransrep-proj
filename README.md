@@ -4,11 +4,17 @@ RStudio project and supporting files for a quick start of the workshop.
 
 ## Installation
 
-1. RStudio in the most recent version
+1. R, preferably in the most recent version
+
+    - Windows: https://cran.r-project.org/bin/windows/base/
+    - Mac OS: https://cran.r-project.org/bin/macosx/
+    - Linux: Use your system's package manager, or https://cran.r-project.org/bin/linux/
+
+2. RStudio, preferably in the most recent version
 
     https://www.rstudio.com/products/rstudio/download/#download
 
-2. R packages. Copy the following code at once into RStudio's "Console" pane and press "Enter".
+3. R packages. Copy the following code at once into RStudio's "Console" pane and press "Enter".
 
     ```r
     install.packages(c(
