@@ -26,7 +26,7 @@ RStudio project and supporting files for a quick start of the workshop.
 
 If you can't install RStudio on your local machine, or experience problems, you can always use the rstudio.cloud instance.
 
-1. Navigate to https://rstudio.cloud/project/271256
+1. Navigate to https://rstudio.cloud/project/271256. (Please use a modern browser, Firefox or Chrome should work reasonably well.)
 
     This requires signing up, you can also sign in with a GitHub or Google account.
 
