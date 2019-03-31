@@ -34,4 +34,4 @@ If you can't install RStudio on your local machine, or experience problems, you 
 
 ## Workshop material
 
-To be announced.
+https://bit.ly/2JNxLov
