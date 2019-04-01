@@ -6,3 +6,4 @@ conflict_prefer("filter", "dplyr")
 
 
 filter %>%
+  mutate(recovery = dep_delay - arr_delay)
