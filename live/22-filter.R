@@ -9,3 +9,6 @@ flights
 
 flights %>%
   filter(dep_time < 600)
+
+flights %>%
+  filter(is.na(dep_time))
