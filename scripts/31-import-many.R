@@ -16,4 +16,6 @@ files %>%
 # Using rio
 rio::import_list(files)
 
-rio::import_list(files, rbind = TRUE)
+files %>%
+  rio::import_list(rbind = TRUE) %>%
+  as_tibble()
