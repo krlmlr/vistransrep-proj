@@ -26,5 +26,5 @@ flights %>%
   view()
 
 flights %>%
-  arrange() %>%
+  arrange(is.na(dep_time)) %>%
   view()
