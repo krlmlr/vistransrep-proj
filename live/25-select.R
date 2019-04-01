@@ -7,3 +7,9 @@ conflict_prefer("filter", "dplyr")
 
 flights %>%
   select(year, month, day)
+
+flights %>%
+  select(year)
+
+flights %>%
+  select(year, month, day, dep_delay, arr_delay)
