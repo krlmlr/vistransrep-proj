@@ -8,4 +8,4 @@ flights %>%
   arrange(dep_time)
 
 flights %>%
-  arrange(dep_time)
+  arrange(dep_time, dep_delay)
