@@ -6,3 +6,6 @@ conflict_prefer("filter", "dplyr")
 
 flights
 ?flights
+
+flights %>%
+  filter()
