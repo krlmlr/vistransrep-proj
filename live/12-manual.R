@@ -102,3 +102,12 @@ ggplot(
   )
 ) +
   geom_point(alpha = 0.2)
+
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = 2.35 / hwy
+  )
+) +
+  geom_point()
