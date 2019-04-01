@@ -25,7 +25,7 @@ flights %>%
   select(
     year, month, day,
     `Departure delay` = dep_delay,
-    arrival_delay = arr_delay
+    `Arrival delay` = arr_delay
   )
 
 
