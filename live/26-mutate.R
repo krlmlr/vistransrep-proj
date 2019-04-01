@@ -31,4 +31,5 @@ flights %>%
 
 flights %>%
   filter(tailnum == "N14228") %>%
+  select(year, month, day, dep_time, arr_time) %>%
   view()
