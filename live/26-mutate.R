@@ -5,5 +5,5 @@ library(conflicted)
 conflict_prefer("filter", "dplyr")
 
 
-filter %>%
+flights %>%
   mutate(recovery = dep_delay - arr_delay)
