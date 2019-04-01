@@ -9,3 +9,7 @@ flights %>%
 
 flights %>%
   arrange(dep_time, dep_delay)
+
+flights %>%
+  arrange(dep_time, dep_delay) %>%
+  view()
