@@ -15,6 +15,12 @@ flights %>%
 
 # Grouped counts
 flights %>%
+  count(origin)
+
+flights %>%
+  count(origin, wt = air_time)
+
+flights %>%
   count(year, month, day)
 
 # Weighted counts
@@ -32,3 +38,4 @@ flights %>%
     mean_air_time = mean(air_time, na.rm = TRUE),
     median_air_time = median(air_time, na.rm = TRUE)
   )
+
