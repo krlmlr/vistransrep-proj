@@ -32,14 +32,9 @@ flights_with_spaces <-
     `Arrival delay` < 0
   )
 
-flights %>%
-  select(
-    year, month, day,
-    `Departure delay` = dep_delay,
-    `Arrival delay` = arr_delay
-  ) %>%
+flights_with_spaces %>%
   select(
     year, month, day,
     dep_delay = `Departure delay`,
-    `Arrival delay` = arr_delay
-  ) %>%
+    arr_delay = `Arrival delay`
+  )
