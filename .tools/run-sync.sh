@@ -5,7 +5,7 @@ pwd
 
 while :
 do
-	date
 	.tools/git-sync
+	date
 	sleep 5
 done
