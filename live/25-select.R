@@ -26,6 +26,9 @@ flights %>%
     year, month, day,
     `Departure delay` = dep_delay,
     `Arrival delay` = arr_delay
+  ) %>%
+  filter(
+    `Arrival delay` < 0
   )
 
 
