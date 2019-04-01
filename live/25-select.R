@@ -21,7 +21,8 @@ flights %>%
     arrival_delay = arr_delay
   )
 
-flights %>%
+flights_with_spaces <-
+  flights %>%
   select(
     year, month, day,
     `Departure delay` = dep_delay,
@@ -31,9 +32,14 @@ flights %>%
     `Arrival delay` < 0
   )
 
-
-
-
-
-
-
+flights %>%
+  select(
+    year, month, day,
+    `Departure delay` = dep_delay,
+    `Arrival delay` = arr_delay
+  ) %>%
+  select(
+    year, month, day,
+    dep_delay = `Departure delay`,
+    `Arrival delay` = arr_delay
+  ) %>%
