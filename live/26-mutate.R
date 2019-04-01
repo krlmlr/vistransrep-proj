@@ -38,5 +38,5 @@ flights %>%
 flights %>%
   filter(tailnum == "N14228") %>%
   select(year, month, day, dep_time, arr_time) %>%
-  mutate(lag_dep_time = lag(dep_time)) %>%
+  mutate(lag_dep_time = lead(dep_time)) %>%
   view()
