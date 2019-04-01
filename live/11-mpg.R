@@ -9,6 +9,7 @@ ggplot(
   mapping = aes(x = displ, y = hwy)
 )
 
+# Scatterplot
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy)
