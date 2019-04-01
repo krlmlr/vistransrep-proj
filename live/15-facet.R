@@ -12,4 +12,4 @@ ggplot(
   mapping = aes(x = displ, y = hwy)
 ) +
   geom_point() +
-  facet_grid(~ class)
+  facet_grid(drv ~ class)
