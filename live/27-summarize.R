@@ -14,6 +14,8 @@ flights %>%
   summarize(n = n())
 
 # Grouped counts
+flights %>%
+  count(year, month, day)
 
 # Weighted counts
 flights %>%
