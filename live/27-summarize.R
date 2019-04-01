@@ -19,3 +19,6 @@ flights %>%
 
 flights %>%
   summarize(n = sum(air_time, na.rm = TRUE))
+
+flights %>%
+  summarize(n = median(air_time, na.rm = TRUE))
