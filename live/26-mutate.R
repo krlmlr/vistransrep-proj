@@ -67,6 +67,6 @@ flights %>%
 
 flights %>%
   filter(tailnum == "N14228") %>%
-  mutate(cum_air_time = cumsum(airtime)) %>%
+  mutate(cum_air_time = cumsum(air_time)) %>%
   select(air_time, cum_air_time) %>%
   view()
