@@ -19,3 +19,12 @@ flights %>%
   filter(month >= 10) %>%
   arrange(dep_time, dep_delay) %>%
   view()
+
+# Add/remove I or view
+flights %>%
+  filter(dep_time < 600) %>%
+  filter(month >= 10) %>% I
+
+# Remember to remove it!
+  arrange(dep_time, dep_delay) %>%
+  view()
