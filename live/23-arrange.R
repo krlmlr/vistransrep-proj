@@ -58,3 +58,9 @@ flights %>%
   filter(day == 1) %>%
   arrange(desc(arr_time)) %>%
   view()
+
+flights %>%
+  filter(month == 4) %>%
+  filter(day == 1) %>%
+  arrange(dep_time, desc(arr_time)) %>%
+  view()
