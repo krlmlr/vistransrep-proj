@@ -35,7 +35,7 @@ ggplot(
   mapping = aes(
     x = displ,
     y = hwy,
-    color = class
+    shape = class
   )
 ) +
   geom_point()
