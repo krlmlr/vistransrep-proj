@@ -25,4 +25,6 @@ recovery_data <-
 
 recovery_data
 
-flights
+flights %>%
+  head() %>%
+  view()
