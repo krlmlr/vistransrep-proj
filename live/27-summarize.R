@@ -8,3 +8,9 @@ conflict_prefer("lag", "dplyr")
 
 flights %>%
   count()
+
+flights %>%
+  count(wt = air_time)
+
+flights %>%
+  summarize(n = sum(air_time))
