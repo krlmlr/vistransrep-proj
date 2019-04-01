@@ -60,3 +60,7 @@ flights %>%
   mutate(lag_arr_time = lag(arr_time)) %>%
   mutate(ground_time = dep_time - lag_arr_time) %>%
   select(-lag_arr_time)
+
+flights %>%
+  filter(tailnum == "N14228") %>%
+  view()
