@@ -9,6 +9,8 @@ conflict_prefer("filter", "dplyr")
 files <- dir(path = here("data"), pattern = "[.]xlsx$", full.names = TRUE)
 files
 
+asdf
+
 # Manually
 files %>%
   map_dfr(~ readxl::read_excel(.))
