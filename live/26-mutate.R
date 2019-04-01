@@ -24,3 +24,5 @@ recovery_data <-
   arrange(recovery)
 
 recovery_data
+
+flights
