@@ -18,6 +18,6 @@ ggplot(
 
 ggplot(
   data = mpg,
-  mapping = aes(x = displ, y = hwy)
+  mapping = aes(x = cyl, y = hwy)
 ) +
   geom_point()
