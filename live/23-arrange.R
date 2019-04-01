@@ -40,6 +40,7 @@ flights %>%
   arrange(!is.na(dep_time)) %>%
   view()
 
+# Descending
 flights %>%
   filter(month == 4) %>%
   filter(day == 1) %>%
