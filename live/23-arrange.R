@@ -33,3 +33,8 @@ flights %>%
 flights %>%
   filter(month == 4) %>%
   arrange(!is.na(dep_time))
+
+flights %>%
+  filter(month == 4) %>%
+  filter(day == 1) %>%
+  arrange(!is.na(dep_time))
