@@ -6,3 +6,6 @@ conflict_prefer("filter", "dplyr")
 
 flights %>%
   arrange(dep_time)
+
+flights %>%
+  arrange(dep_time)
