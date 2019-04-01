@@ -8,4 +8,4 @@ flights
 ?flights
 
 flights %>%
-  filter()
+  filter(dep_time < 600)
