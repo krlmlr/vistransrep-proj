@@ -7,3 +7,7 @@ conflict_prefer("filter", "dplyr")
 
 flights %>%
   mutate(recovery = dep_delay - arr_delay)
+
+flights %>%
+  mutate(recovery = dep_delay - arr_delay) %>%
+  select(dep_delay, arr_delay, recovery)
