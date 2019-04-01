@@ -92,3 +92,10 @@ flights %>%
   mutate(delayed = arr_delay > 0) %>%
   select(arr_delay, delayed) %>%
   filter(!delayed)
+
+on_time_flights
+  flights %>%
+  filter(tailnum == "N14228") %>%
+  mutate(delayed = arr_delay > 0) %>%
+  select(arr_delay, delayed) %>%
+  filter(!delayed)
