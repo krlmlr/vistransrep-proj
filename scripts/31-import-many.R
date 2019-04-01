@@ -9,5 +9,11 @@ conflict_prefer("filter", "dplyr")
 files <- dir(path = here("data"), pattern = "[.]xlsx$", full.names = TRUE)
 files
 
+# Manually
 files %>%
   map_dfr(~ readxl::read_excel(.))
+
+# Using rio
+rio::import_list(files)
+
+rio::import_list(files, rbind = TRUE)
