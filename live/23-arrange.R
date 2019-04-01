@@ -24,3 +24,7 @@ flights %>%
   filter(month >= 10) %>%
   arrange(dep_time, dep_delay) %>%
   view()
+
+flights %>%
+  arrange() %>%
+  view()
