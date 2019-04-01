@@ -76,7 +76,7 @@ ggplot(
   mapping = aes(
     x = displ,
     y = hwy,
-    color = "blue"
+    color = blue
   )
 ) +
   geom_point()
