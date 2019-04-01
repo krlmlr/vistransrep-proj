@@ -39,3 +39,13 @@ ggplot(
   )
 ) +
   geom_point()
+
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = hwy,
+    shape = drv
+  )
+) +
+  geom_point()
