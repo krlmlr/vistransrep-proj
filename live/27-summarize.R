@@ -6,14 +6,16 @@ conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
 
+# Simple counts
 flights %>%
   count()
 
 flights %>%
-  count(wt = air_time)
-
-flights %>%
   summarize(n = n())
+
+# Weighted counts
+flights %>%
+  count(wt = air_time)
 
 flights %>%
   summarize(n = sum(air_time, na.rm = TRUE))
