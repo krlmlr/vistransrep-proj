@@ -30,4 +30,5 @@ flights %>%
   view()
 
 flights %>%
-  filter(tailnum == "N14228")
+  filter(tailnum == "N14228") %>%
+  view()
