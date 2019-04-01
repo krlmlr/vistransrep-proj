@@ -12,3 +12,10 @@ early_flights <-
 early_flights <- filter(flights, dep_time < 600)
 
 ?"%>%"
+
+flights %>%
+  filter(dep_time < 600) %>%
+  filter(month >= 10) %>%
+  arrange(dep_time, dep_delay) %>%
+  view()
+
