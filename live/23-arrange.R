@@ -26,5 +26,6 @@ flights %>%
   view()
 
 flights %>%
+  filter(month == 4) %>%
   arrange(is.na(dep_time)) %>%
   view()
