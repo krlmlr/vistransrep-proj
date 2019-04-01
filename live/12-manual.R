@@ -111,3 +111,12 @@ ggplot(
   )
 ) +
   geom_point()
+
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = 2.35 / hwy
+  )
+) +
+  geom_point(color = class)
