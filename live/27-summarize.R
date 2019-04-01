@@ -13,6 +13,8 @@ flights %>%
 flights %>%
   summarize(n = n())
 
+# Grouped counts
+
 # Weighted counts
 flights %>%
   count(wt = air_time)
