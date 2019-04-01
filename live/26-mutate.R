@@ -73,7 +73,7 @@ flights %>%
 
 flights %>%
   filter(tailnum == "N14228") %>%
-  mutate(delayed = if_else())
+  mutate(delayed = if_else(arr_delay > 0, "delayed", "on time"))
 
   mutate(cum_air_time = cumsum(air_time)) %>%
   select(air_time, cum_air_time) %>%
