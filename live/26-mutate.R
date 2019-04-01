@@ -11,3 +11,8 @@ flights %>%
 flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   select(dep_delay, arr_delay, recovery)
+
+flights %>%
+  mutate(recovery = dep_delay - arr_delay) %>%
+  select(dep_delay, arr_delay, recovery) %>%
+  arrange(recovery)
