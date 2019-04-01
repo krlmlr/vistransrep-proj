@@ -59,3 +59,14 @@ ggplot(
   )
 ) +
   geom_point()
+
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = hwy,
+    color = class,
+    size = cty
+  )
+) +
+  geom_point()
