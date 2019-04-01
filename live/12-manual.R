@@ -83,3 +83,13 @@ ggplot(
 
 mpg
 "mpg"
+
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = hwy,
+    color = "blue"
+  )
+) +
+  geom_point()
