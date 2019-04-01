@@ -26,5 +26,5 @@ flights %>%
   filter(month >= 10) %>% I
 
 # Remember to remove it!
-  arrange(dep_time, dep_delay) %>%
-  view()
+  # arrange(dep_time, dep_delay) %>%
+  # view()
