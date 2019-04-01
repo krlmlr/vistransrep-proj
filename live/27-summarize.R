@@ -13,4 +13,7 @@ flights %>%
   count(wt = air_time)
 
 flights %>%
+  summarize(n = n())
+
+flights %>%
   summarize(n = sum(air_time, na.rm = TRUE))
