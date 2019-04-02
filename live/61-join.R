@@ -34,3 +34,7 @@ flights %>%
 
 airports %>%
   filter(faa == "BQN")
+
+flights %>%
+  inner_join(airports, by = c("dest" = "faa")) %>%
+  select(origin, dest, name)
