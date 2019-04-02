@@ -11,3 +11,4 @@ conflict_prefer("lag", "dplyr")
 airlines
 
 flights %>%
+  left_join()
