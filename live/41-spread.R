@@ -32,6 +32,9 @@ table2 %>%
 table1
 
 table1 %>%
+  gather(type, count, -country, -year)
+
+table1 %>%
   gather(type, count, -country, -year) %>%
   arrange(country, year, type)
 
