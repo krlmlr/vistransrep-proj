@@ -73,3 +73,6 @@ table4b
 
 table4a %>%
   mutate(type = "cases")
+
+table4b %>%
+  mutate(type = "population")
