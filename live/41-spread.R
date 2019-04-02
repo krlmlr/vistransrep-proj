@@ -15,3 +15,10 @@ table1 %>%
     max_cases = max(cases),
     max_population = max(population)
   )
+
+table2 %>%
+  group_by(country) %>%
+  summarize(
+    max_cases = max(cases),
+    max_population = max(population)
+  )
