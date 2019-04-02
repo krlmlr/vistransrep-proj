@@ -24,3 +24,6 @@ flights %>%
 airports
 
 ?flights
+
+flights %>%
+  left_join(airports)
