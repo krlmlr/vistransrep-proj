@@ -13,3 +13,5 @@ table2 %>%
 # gt package
 
 ?`tidyr-package`
+
+# https://tidyr.tidyverse.org/
