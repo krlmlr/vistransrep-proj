@@ -10,6 +10,10 @@ table2 %>%
   xtabs(count ~ ., .) %>%
   ftable()
 
+table2 %>%
+  xtabs(count ~ ., .) %>%
+  ftable(col.vars = c())
+
 # gt package
 
 ?`tidyr-package`
