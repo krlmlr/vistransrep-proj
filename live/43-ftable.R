@@ -7,4 +7,5 @@ conflict_prefer("lag", "dplyr")
 
 
 table2 %>%
-  xtabs(count ~ ., .)
+  xtabs(count ~ ., .) %>%
+  ftable()
