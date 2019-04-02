@@ -28,9 +28,14 @@ plot_fun <- function(data) {
 plot_fun(flights)
 
 # Call this function for each subgroup
-flights %>%
+plot_df <-
+  flights %>%
   group_by(month) %>%
   summarize(
     plot = list(plot_fun(tibble(carrier)))
   ) %>%
   ungroup()
+
+plot_df
+
+# Show the plots
