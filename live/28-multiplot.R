@@ -39,3 +39,5 @@ plot_df <-
 plot_df
 
 # Show the plots
+plot_df %>%
+  pull()
