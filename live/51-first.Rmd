@@ -61,7 +61,8 @@ flights_per_month %>%
   )
 ```
 
-## Including Plots
+\section{Including Plots}
+
 
 You can also embed plots, for example:
 
