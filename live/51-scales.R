@@ -44,6 +44,6 @@ ggplot(
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point() +
-  scale_x_log10() +
+  scale_x_log10(name = "Displacement") +
   scale_y_log10()
 
