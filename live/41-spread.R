@@ -92,4 +92,4 @@ bind_rows(cases_tbl, population_tbl) %>%
   gather(year, count, -country, -type) %>%
   spread(type, count)
 
-bind_rows(cases = table4a, population = table4b)
+bind_rows(cases = table4a, population = table4b, .id = "type")
