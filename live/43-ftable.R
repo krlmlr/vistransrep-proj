@@ -16,6 +16,8 @@ table2 %>%
 
 # gt package
 
+# reporttools package
+
 ?`tidyr-package`
 
 # https://tidyr.tidyverse.org/
