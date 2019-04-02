@@ -10,3 +10,4 @@ conflict_prefer("lag", "dplyr")
 
 airlines
 
+flights %>%
