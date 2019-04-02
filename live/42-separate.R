@@ -11,6 +11,13 @@ table3
 table3 %>%
   separate(rate, into = c("cases", "population"))
 
+table3 %>%
+  separate(rate, into = c("cases", "population"), sep = "/")
+
+table3 %>%
+  separate(rate, into = c("cases", "population"), sep = "/", convert = TRUE)
+
+
 ?separate
 
 tribble(
