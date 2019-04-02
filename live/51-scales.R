@@ -79,3 +79,12 @@ ggplot(
   scale_x_log10() +
   scale_y_log10() +
   scale_color_viridis_d(option = "B")
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  scale_color_manual(option = "B")
