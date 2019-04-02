@@ -8,25 +8,9 @@ output:
     number_sections: true
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(nycflights13)
 
-library(here)
 
-library(conflicted)
-conflict_prefer("filter", "dplyr")
-conflict_prefer("lag", "dplyr")
-```
 
-```{r setup-2, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(error = TRUE)
-
-set.seed(20190402)
-
-load(here("data/first-report.rda"))
-```
 
 # R Markdown
 
@@ -44,12 +28,11 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r comment-1, echo = FALSE}
-# Comment
-```
 
 
-```{r flights}
+
+
+```r
 flights_per_month %>% 
   ggplot(aes(x = factor(month), y = n)) +
   geom_col() +
@@ -61,26 +44,41 @@ flights_per_month %>%
   )
 ```
 
+<img src="51-first_files/figure-html/flights-1.png" width="672" />
+
 ## Including Plots
 
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+<img src="51-first_files/figure-html/pressure-1.png" width="672" />
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 $$\sqrt{\sum_1^5{x_i}}$$
 
-```{r table}
+
+```r
 table1 %>% 
   knitr::kable()
 ```
 
 
-```{r datatable}
+
+country        year    cases   population
+------------  -----  -------  -----------
+Afghanistan    1999      745     19987071
+Afghanistan    2000     2666     20595360
+Brazil         1999    37737    172006362
+Brazil         2000    80488    174504898
+China          1999   212258   1272915272
+China          2000   213766   1280428583
+
+
+
+```r
 table1 %>% 
   DT::datatable()
 ```
+
+preserve1e29b8f66a9e83d8
