@@ -42,3 +42,6 @@ table1 %>%
 
 table1 %>%
   unite(rate, cases:population, sep = "/")
+
+# table2 -> table3 directly
+table2
