@@ -11,3 +11,5 @@ table2 %>%
   ftable()
 
 # gt package
+
+?`tidyr-package`
