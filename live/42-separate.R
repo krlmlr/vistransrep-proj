@@ -20,13 +20,17 @@ table3 %>%
 
 ?separate
 
-tribble(
-  ~num,
-  "1'000.00",
-  "2'000'000.00"
-) %>%
+thousand_separator <-
+  tribble(
+    ~num,
+    "1'000.00",
+    "2'000'000.00"
+  )
+
+thousand_separator %>%
   separate(num, into = c("num"))
 
+# Uniting
 table1 %>%
   unite(rate, cases:population)
 
