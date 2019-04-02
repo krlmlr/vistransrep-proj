@@ -43,3 +43,10 @@ ggplot(
   geom_point() +
   theme(legend.position = "bottom") +
   theme_bw()
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  geom_point() +
+  theme_bw(16)
