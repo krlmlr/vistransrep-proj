@@ -85,3 +85,6 @@ flights_by_day <-
     median_air_time = median(air_time, na.rm = TRUE)
   ) %>%
   ungroup()
+
+flights_by_day
+
