@@ -22,6 +22,8 @@ plot_fun <- function(data) {
     facet_wrap(~month)
 }
 
+plot_fun(flights)
+
 flights %>%
   group_by(month) %>%
   summarize(
