@@ -10,3 +10,12 @@ table3
 
 table3 %>%
   separate(rate, into = c("cases", "population"))
+
+?separate
+
+tribble(
+  ~num,
+  "1'000.00",
+  "2'000'000.00"
+) %>%
+  separate(num, into = c("num"))
