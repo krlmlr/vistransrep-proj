@@ -68,3 +68,11 @@ flights %>%
     median_air_time = median(air_time, na.rm = TRUE)
   ) %>%
   ungroup()
+
+flights %>%
+  group_by(year, month, day) %>%
+  summarize(
+    mean(air_time, na.rm = TRUE),
+    median(air_time, na.rm = TRUE)
+  ) %>%
+  ungroup()
