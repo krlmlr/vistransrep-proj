@@ -69,3 +69,6 @@ airports %>%
 airports %>%
   count(faa) %>%
   count(n)
+
+dup_airports <-
+  bind_rows(airports, airports)
