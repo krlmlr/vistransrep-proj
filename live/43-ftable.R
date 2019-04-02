@@ -6,3 +6,5 @@ conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
 
+table2 %>%
+  xtabs(count ~ ., .)
