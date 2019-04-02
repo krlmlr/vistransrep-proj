@@ -32,6 +32,7 @@ ggplot(
     subtitle = "By car class"
   )
 
+
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
