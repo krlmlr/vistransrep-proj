@@ -71,7 +71,7 @@ airports %>%
   count(n)
 
 dup_airports <-
-  bind_rows(airports, sample_n(airports, 1000))
+  bind_rows(airports, sample_n(airports, 100))
 
 dup_airports %>%
   count(faa)
@@ -81,7 +81,7 @@ dup_airports %>%
   count(n)
 
 flights %>%
-  left_join(airports, by = c("dest" = "faa")) %>%
+  left_join(dup_airports, by = c("dest" = "faa")) %>%
   select(origin, dest, name)
 
 flights
