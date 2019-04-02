@@ -25,6 +25,7 @@ getwd()
 
 ```{r setup-2, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
 
 set.seed(20190402)
 
