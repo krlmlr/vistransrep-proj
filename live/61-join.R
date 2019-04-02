@@ -60,5 +60,5 @@ dest_airports
 
 flights %>%
   left_join(origin_airports) %>%
-  left_join(origin_airports) %>%
+  left_join(dest_airports) %>%
   select(origin, dest, name)
