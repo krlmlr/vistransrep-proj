@@ -88,3 +88,12 @@ ggplot(
   scale_x_log10() +
   scale_y_log10() +
   scale_color_manual(values = c("2seater" = "#000000", "minivan" = "#3355FF", ...))
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  scale_color_manual(values = c("#000000", "#3355FF", "#3355FF", "#3355FF", "#3355FF", "#3355FF", "#3355FF"))
