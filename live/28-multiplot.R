@@ -21,8 +21,7 @@ flights %>%
 plot_fun <- function(data) {
   data %>%
     ggplot(aes(x = carrier)) +
-    geom_bar() +
-    facet_wrap(~month)
+    geom_bar()
 }
 
 plot_fun(flights)
