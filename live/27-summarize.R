@@ -153,6 +153,16 @@ flights %>%
 
 flights %>%
   group_by(origin, dest, carrier) %>%
+  summarize(n_flights = n())
+
+flights %>%
+  group_by(origin, dest, carrier) %>%
+  summarize(n_flights = n()) %>%
+  summarize(n_distinct_carriers = n()) %>%
+  ungroup()
+
+flights %>%
+  group_by(origin, dest, carrier) %>%
   summarize(n_flights = n()) %>%
   summarize(n_distinct_carriers = n()) %>%
   ungroup() %>%
