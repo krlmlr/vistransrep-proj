@@ -86,3 +86,4 @@ population_tbl
 bind_rows(cases_tbl, population_tbl)
 
 bind_rows(cases_tbl, population_tbl) %>%
+  gather(year, count, -country, -type)
