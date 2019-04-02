@@ -31,3 +31,9 @@ ggplot(
     title = "Highway mileages depending on displacement",
     subtitle = "By car class"
   )
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  geom_point()
