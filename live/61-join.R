@@ -60,3 +60,12 @@ flights %>%
   left_join(origin_airports, by = "origin") %>%
   left_join(dest_airports, by = "dest") %>%
   select(origin, origin_name, dest, dest_name)
+
+# Keys!
+
+airports %>%
+  count(faa)
+
+airports %>%
+  count(faa) %>%
+  count(n)
