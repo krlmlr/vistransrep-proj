@@ -39,13 +39,6 @@ flights %>%
   inner_join(airports, by = c("dest" = "faa")) %>%
   select(origin, dest, name)
 
-airports %>%
-  count(faa)
-
-airports %>%
-  count(faa) %>%
-  count(n)
-
 origin_airports <-
   airports %>%
   select(origin = faa, origin_name = name)
