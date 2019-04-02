@@ -131,5 +131,14 @@ flights %>%
 
 flights %>%
   summarize(not_departed = sum(is.na(dep_time))) %>%
-  arrange(desc(not_departed)) %>%
-  filter(!is.na(tailnum))
+  arrange(desc(not_departed))
+
+flights %>%
+  filter(is.na(dep_time))
+
+# Distinct airlines per relation
+flights %>%
+  count(origin, dest, carrier) %>%
+  count(origin, dest) %>%
+  ungroup() %>%
+  arrange(desc(n))
