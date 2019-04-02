@@ -28,3 +28,10 @@ table2 %>%
   summarize(
     max = max(count)
   )
+
+table1
+
+table1 %>%
+  gather(type, count, )
+
+table2
