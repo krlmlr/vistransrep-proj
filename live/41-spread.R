@@ -50,5 +50,5 @@ table2 %>%
 table2 %>%
   filter(type == "cases") %>%
   ggplot() +
-  geom_col(aes(country, count, fill = year)) +
+  geom_col(aes(country, count, fill = factor(year))) +
   facet_wrap(~year)
