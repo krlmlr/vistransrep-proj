@@ -103,6 +103,12 @@ total_airtime_by_carrier %>%
 
 total_airtime_by_carrier %>%
   arrange(acc_air_time) %>%
+  ggplot() +
+  geom_col(aes(carrier, acc_air_time / 60 / 24 / 365)) +
+  coord_flip()
+
+total_airtime_by_carrier %>%
+  arrange(acc_air_time) %>%
   mutate(carrier = fct_inorder(carrier)) %>%
   ggplot() +
   geom_col(aes(carrier, acc_air_time / 60 / 24 / 365))
