@@ -52,3 +52,8 @@ table2 %>%
   ggplot() +
   geom_col(aes(country, count, fill = factor(year))) +
   facet_wrap(~year)
+
+table1 %>%
+  ggplot() +
+  geom_col(aes(country, cases, fill = factor(year))) +
+  facet_wrap(~year)
