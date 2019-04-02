@@ -26,3 +26,6 @@ tribble(
   "2'000'000.00"
 ) %>%
   separate(num, into = c("num"))
+
+table1 %>%
+  unite(rate, cases:population)
