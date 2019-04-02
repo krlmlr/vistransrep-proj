@@ -82,3 +82,5 @@ population_tbl <-
   mutate(type = "population")
 
 population_tbl
+
+bind_rows()
