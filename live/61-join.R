@@ -17,3 +17,6 @@ flights %>%
   left_join(airlines) %>%
   select(dep_time, carrier, name)
 
+flights %>%
+  left_join(airlines) %>%
+  select(dep_time, carrier, name)
