@@ -50,6 +50,12 @@ table2 %>%
 table2 %>%
   filter(type == "cases") %>%
   ggplot() +
+  geom_col(aes(country, count, fill = year)) +
+  facet_wrap(~year)
+
+table2 %>%
+  filter(type == "cases") %>%
+  ggplot() +
   geom_col(aes(country, count, fill = factor(year))) +
   facet_wrap(~year)
 
@@ -57,3 +63,13 @@ table1 %>%
   ggplot() +
   geom_col(aes(country, cases, fill = factor(year))) +
   facet_wrap(~year)
+
+# Binding
+
+table4a
+
+table4b
+
+
+table4a %>%
+  mutate(type = "cases")
