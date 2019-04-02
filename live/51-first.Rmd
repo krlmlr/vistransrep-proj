@@ -29,7 +29,7 @@ knitr::opts_chunk$set(error = TRUE)
 
 set.seed(20190402)
 
-#load("data/first-report.rda")
+load(here("data/first-report.rda"))
 ```
 
 # R Markdown
