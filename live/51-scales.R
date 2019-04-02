@@ -24,4 +24,8 @@ ggplot(
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point() +
-  labs()
+  labs(
+    x = "Displacement",
+    y = "Highway mileage\n[miles per gallon]",
+    color = "Car class"
+  )
