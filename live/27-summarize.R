@@ -88,6 +88,7 @@ flights_by_day <-
 
 flights_by_day
 
+# Mean distance, visualized
 total_airtime_by_carrier <-
   flights %>%
   group_by(carrier) %>%
