@@ -23,3 +23,4 @@ flights %>%
 
 airports
 
+?flights
