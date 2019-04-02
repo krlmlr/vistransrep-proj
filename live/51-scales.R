@@ -28,5 +28,6 @@ ggplot(
     x = "Displacement",
     y = "Highway mileage\n[miles per gallon]",
     color = "Car class",
-    title = "Highway mileages depending on displacement, by car class"
+    title = "Highway mileages depending on displacement",
+    subtitle "By car class"
   )
