@@ -4,6 +4,7 @@ author: "Kirill Müller"
 date: "4/2/2019"
 output:
   html_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
