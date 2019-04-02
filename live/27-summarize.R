@@ -138,6 +138,9 @@ flights %>%
 
 # Distinct airlines per relation
 flights %>%
+  count(origin, dest, carrier)
+
+flights %>%
   count(origin, dest, carrier) %>%
   count(origin, dest) %>%
   ungroup() %>%
