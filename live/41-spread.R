@@ -35,7 +35,13 @@ table1 %>%
   gather(type, count, -country, -year)
 
 table1 %>%
+  gather(type, count, type:count)
+
+table1 %>%
   gather(type, count, -country, -year) %>%
   arrange(country, year, type)
 
 table2
+
+table2 %>%
+  spread(type, count)
