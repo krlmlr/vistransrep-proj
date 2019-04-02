@@ -18,5 +18,5 @@ flights %>%
   select(dep_time, carrier, name)
 
 flights %>%
-  left_join(airlines) %>%
+  left_join(airlines, by = "carrier") %>%
   select(dep_time, carrier, name)
