@@ -34,4 +34,3 @@ table1 %>%
 
 table1 %>%
   unite(rate, cases:population, sep = "/")
-
