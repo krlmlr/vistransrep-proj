@@ -81,3 +81,4 @@ population_tbl <-
   table4b %>%
   mutate(type = "population")
 
+population_tbl
