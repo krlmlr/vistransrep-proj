@@ -120,6 +120,7 @@ total_airtime_by_carrier %>%
   geom_col(aes(carrier, acc_air_time / 60 / 24 / 365)) +
   coord_flip()
 
+# Worst plane
 flights %>%
   group_by(tailnum) %>%
   summarize(not_departed = sum(is.na(dep_time))) %>%
