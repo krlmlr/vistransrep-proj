@@ -61,3 +61,12 @@ ggplot(
   ) +
   scale_y_log10()
 
+
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  scale_color_brewer(type = "qual")
