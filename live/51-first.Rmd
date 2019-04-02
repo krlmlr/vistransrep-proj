@@ -48,7 +48,7 @@ When you click the **Knit** button a document will be generated that includes bo
 flights %>% 
   count(month) %>% 
   ggplot(aes(x = month)) +
-  geom_bar()
+  geom_col()
 ```
 
 ## Including Plots
