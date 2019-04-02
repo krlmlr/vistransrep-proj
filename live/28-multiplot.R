@@ -6,3 +6,27 @@ conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
 
+flights %>%
+  ggplot(aes(x = carrier)) +
+  geom_bar()
+
+flights %>%
+  ggplot(aes(x = carrier)) +
+  geom_bar() +
+  facet_wrap(~month)
+
+plot_fun <- function(data) {
+  data %>%
+    ggplot(aes(x = carrier)) +
+    geom_bar() +
+    facet_wrap(~month)
+}
+
+flights %>%
+  group_by(month) %>%
+  summarize(
+    plot = ggp
+  )
+  ggplot(aes(x = carrier)) +
+  geom_bar() +
+  facet_wrap(~month)
