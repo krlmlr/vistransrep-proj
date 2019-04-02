@@ -22,6 +22,7 @@ conflict_prefer("lag", "dplyr")
 ```{r}
 getwd()
 here()
+here("data/first-report.rda")
 ```
 
 ```{r setup-2, include=FALSE}
