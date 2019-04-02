@@ -27,8 +27,6 @@ plot_fun(flights)
 flights %>%
   group_by(month) %>%
   summarize(
-    plot = ggp
-  )
-  ggplot(aes(x = carrier)) +
-  geom_bar() +
-  facet_wrap(~month)
+    plot = plot_fun(tibble(carrier))
+  ) %>%
+  ungroup()
