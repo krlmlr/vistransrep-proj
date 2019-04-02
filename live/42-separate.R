@@ -29,3 +29,9 @@ tribble(
 
 table1 %>%
   unite(rate, cases:population)
+
+?unite
+
+table1 %>%
+  unite(rate, cases:population, sep = "/")
+
