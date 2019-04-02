@@ -46,5 +46,5 @@ table1 %>%
 # table2 -> table3 directly
 table2 %>%
   group_by(country, year) %>%
-  summarize(rate = str_c) %>%
+  summarize(rate = paste(count, collapse = "/")) %>%
   ungroup()
