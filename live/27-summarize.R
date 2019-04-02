@@ -119,3 +119,9 @@ total_airtime_by_carrier %>%
   ggplot() +
   geom_col(aes(carrier, acc_air_time / 60 / 24 / 365)) +
   coord_flip()
+
+flights %>%
+  group_by(tailnum) %>%
+  summarize(not_departed = sum(is.na(dep_time))) %>%
+  ungroup %>%
+  arrange(desc(not_departed))
