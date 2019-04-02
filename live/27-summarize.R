@@ -141,11 +141,19 @@ flights %>%
   count(origin, dest, carrier, sort = TRUE)
 
 flights %>%
+  count(origin, dest, carrier)
+
+flights %>%
   count(origin, dest, carrier) %>%
   count(origin, dest)
 
 flights %>%
   count(origin, dest, carrier) %>%
-  count(origin, dest) %>%
+  count(origin, dest, sort = TRUE)
+
+flights %>%
+  group_by(origin, dest, carrier) %>%
+  summarize(n_flights = n()) %>%
+  summarize(n_distinct_carriers = n()) %>%
   ungroup() %>%
-  arrange(desc(n))
+  arrange(desc(n_distinct_carriers))
