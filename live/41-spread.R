@@ -100,3 +100,9 @@ mpg %>%
   select(id, everything()) %>%
   gather(cty_hwy, value, hwy, cty) %>%
   arrange(id)
+
+mpg %>%
+  select(displ, hwy, cty) %>%
+  gather(cty_hwy, value, -displ) %>%
+  ggplot() +
+  geom_jitter(aes(displ, value, color = cty_hwy))
