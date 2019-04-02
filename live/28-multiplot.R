@@ -27,6 +27,6 @@ plot_fun(flights)
 flights %>%
   group_by(month) %>%
   summarize(
-    plot = plot_fun(tibble(carrier))
+    plot = list(plot_fun(tibble(carrier)))
   ) %>%
   ungroup()
