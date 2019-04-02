@@ -93,3 +93,10 @@ bind_rows(cases_tbl, population_tbl) %>%
   spread(type, count)
 
 bind_rows(cases = table4a, population = table4b, .id = "type")
+
+# mpg
+mpg %>%
+  mutate(id = row_number()) %>%
+  select(id, everything()) %>%
+  gather(cty_hwy, value, hwy, cty) %>%
+  arrange(id)
