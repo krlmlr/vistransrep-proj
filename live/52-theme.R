@@ -33,4 +33,5 @@ ggplot(
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point() +
+  theme_bw() +
   theme(legend.position = "bottom")
