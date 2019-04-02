@@ -51,6 +51,13 @@ ggplot(
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point() +
+  labs(
+    x = "Displacement",
+    y = "Highway mileage\n[miles per gallon]",
+    color = "Car class",
+    title = "Highway mileages depending on displacement",
+    subtitle = "By car class"
+  ) +
   scale_x_log10(name = "Displacement") +
   scale_y_log10()
 
