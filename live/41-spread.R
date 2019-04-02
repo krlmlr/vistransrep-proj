@@ -16,6 +16,13 @@ table1 %>%
     max_population = max(population)
   )
 
+table1 %>%
+  group_by(country) %>%
+  summarize_at(
+    vars(cases, population),
+    max
+  )
+
 table2 %>%
   group_by(country, type) %>%
   summarize(
