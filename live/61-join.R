@@ -27,3 +27,6 @@ airports
 
 flights %>%
   left_join(airports)
+
+flights %>%
+  left_join(airports, by = c("dest" = "faa"))
