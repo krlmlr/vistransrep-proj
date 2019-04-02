@@ -88,3 +88,28 @@ flights_by_day <-
 
 flights_by_day
 
+total_airtime_by_carrier <-
+  flights %>%
+  group_by(carrier) %>%
+  summarize(acc_air_time = sum(air_time, na.rm = TRUE)) %>%
+  ungroup()
+
+total_airtime_by_carrier %>%
+  arrange(acc_air_time)
+
+total_airtime_by_carrier %>%
+  arrange(acc_air_time) %>%
+  mutate(carrier = fct_inorder(carrier))
+
+total_airtime_by_carrier %>%
+  arrange(acc_air_time) %>%
+  mutate(carrier = fct_inorder(carrier)) %>%
+  ggplot() +
+  geom_col(aes(carrier, acc_air_time / 60 / 24 / 365))
+
+total_airtime_by_carrier %>%
+  arrange(acc_air_time) %>%
+  mutate(carrier = fct_inorder(carrier)) %>%
+  ggplot() +
+  geom_col(aes(carrier, acc_air_time / 60 / 24 / 365)) +
+  coord_flip()
