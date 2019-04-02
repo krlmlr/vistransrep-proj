@@ -21,6 +21,7 @@ conflict_prefer("lag", "dplyr")
 
 ```{r}
 getwd()
+here()
 ```
 
 ```{r setup-2, include=FALSE}
