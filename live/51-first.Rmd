@@ -47,8 +47,7 @@ When you click the **Knit** button a document will be generated that includes bo
 
 
 ```{r flights}
-flights %>% 
-  count(month) %>% 
+flights_per_month %>% 
   ggplot(aes(x = factor(month), y = n)) +
   geom_col() +
   labs(
