@@ -23,6 +23,8 @@ conflict_prefer("lag", "dplyr")
 knitr::opts_chunk$set(echo = TRUE)
 
 set.seed(20190402)
+
+load("data/first-report.rda")
 ```
 
 # R Markdown
