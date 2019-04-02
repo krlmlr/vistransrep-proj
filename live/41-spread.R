@@ -19,6 +19,5 @@ table1 %>%
 table2 %>%
   group_by(country, type) %>%
   summarize(
-    max_cases = max(cases),
-    max_population = max(population)
+    max = max(count)
   )
