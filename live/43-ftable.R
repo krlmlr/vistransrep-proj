@@ -9,3 +9,5 @@ conflict_prefer("lag", "dplyr")
 table2 %>%
   xtabs(count ~ ., .) %>%
   ftable()
+
+# gt package
