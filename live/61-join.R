@@ -49,3 +49,7 @@ airports %>%
 origin_airports <-
   airports %>%
   select(origin = faa, origin_name = name)
+
+dest_airports <-
+  airports %>%
+  select(dest = faa, dest_name = name)
