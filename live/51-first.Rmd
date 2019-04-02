@@ -17,7 +17,9 @@ library(here)
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
+```
 
+```{r setup-2, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 set.seed(20190402)
