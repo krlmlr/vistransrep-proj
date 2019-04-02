@@ -12,7 +12,7 @@ table2 %>%
 
 table2 %>%
   xtabs(count ~ ., .) %>%
-  ftable(col.vars = c())
+  ftable(col.vars = c("year", "type"))
 
 # gt package
 
