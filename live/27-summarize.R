@@ -124,4 +124,5 @@ flights %>%
   group_by(tailnum) %>%
   summarize(not_departed = sum(is.na(dep_time))) %>%
   ungroup %>%
-  arrange(desc(not_departed))
+  arrange(desc(not_departed)) %>%
+  filter(!is.na(tailnum))
