@@ -30,6 +30,10 @@ thousand_separator <-
 thousand_separator %>%
   separate(num, into = c("num"))
 
+thousand_separator %>%
+  mutate(num = str_replace_all(num, "[^0-9.]", "")) %>%
+  mutate(num = as.numeric(num))
+
 # Uniting
 table1 %>%
   unite(rate, cases:population)
