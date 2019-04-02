@@ -87,4 +87,4 @@ ggplot(
   geom_point() +
   scale_x_log10() +
   scale_y_log10() +
-  scale_color_manual()
+  scale_color_manual(values = c("2seater" = "#000000", "minivan" = "#3355FF", ...))
