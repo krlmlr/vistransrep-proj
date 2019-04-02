@@ -32,9 +32,9 @@ ggplot(
     subtitle = "By car class"
   )
 
-
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
-  geom_point()
+  geom_point() +
+  scale_x_log10()
