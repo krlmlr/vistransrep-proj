@@ -1,7 +1,7 @@
 ---
 title: "My rmarkdown document"
 author: "Kirill Müller"
-date: "4/2/2019"
+date: "2019-04-02"
 output:
   html_document:
     toc: true
