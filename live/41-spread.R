@@ -45,3 +45,10 @@ table2
 
 table2 %>%
   spread(type, count)
+
+# Changing color
+table2 %>%
+  filter(type == "cases") %>%
+  ggplot() +
+  geom_col(aes(country, count, fill = year)) +
+  facet_wrap(~year)
