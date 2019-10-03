@@ -12,7 +12,7 @@ flights %>%
 
 # select 2
 flights %>%
-  select(year)
+  select(-year)
 
 # select 3
 flights %>%
@@ -45,3 +45,7 @@ flights_with_spaces %>%
     dep_delay = `Departure delay`,
     arr_delay = `Arrival delay`
   )
+
+# select helpers
+flights %>%
+  select(origin, dest, ends_with("_time"))

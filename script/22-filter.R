@@ -17,3 +17,14 @@ flights %>%
 # filter 2
 flights %>%
   filter(is.na(dep_time))
+
+# one AND the other
+flights %>%
+  filter(dep_time < 600 & arr_time > 2200)
+
+flights %>%
+  filter(dep_time >= 700 & arr_time < 800)
+
+# one OR the other
+flights %>%
+  filter(dep_time < 600 | arr_time > 2200)
