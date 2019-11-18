@@ -23,7 +23,7 @@ flights %>%
 
 # summarize with median
 flights %>%
-  summarize(n = median(air_time, na.rm = TRUE))
+  summarize(median = median(air_time, na.rm = TRUE))
 
 # compute multiple summaries
 flights %>%
@@ -50,9 +50,11 @@ flights %>%
   summarize(
     mean_air_time = mean(air_time, na.rm = TRUE),
     median_air_time = median(air_time, na.rm = TRUE)
-  )
+  ) %>%
+  ungroup()
 
 # Anonymous summarize for a quick glance
+# (column name is defined by the expression)
 flights %>%
   group_by(year, month, day) %>%
   summarize(
