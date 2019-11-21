@@ -2,7 +2,7 @@
 
 library(tidyverse)
 
-# chose color in geom
+# choose color in geom
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy)
@@ -29,13 +29,14 @@ ggplot(
     color = "green"
   )
 
-# color as 3rd aesthetic
+# color as 3rd aesthetic (discrete)
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point()
 
+# color as 3rd aesthetic (continuous)
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = cty)
@@ -54,16 +55,6 @@ ggplot(
   geom_point()
 
 # shape mapped on drv
-ggplot(
-  data = mpg,
-  mapping = aes(
-    x = displ,
-    y = hwy,
-    shape = drv
-  )
-) +
-  geom_point()
-
 ggplot(
   data = mpg,
   mapping = aes(
@@ -126,6 +117,7 @@ ggplot(
 ) +
   geom_point()
 
+# correct way to specify manual aesthetic
 ggplot(
   data = mpg,
   mapping = aes(

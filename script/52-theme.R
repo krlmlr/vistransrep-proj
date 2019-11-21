@@ -7,7 +7,6 @@ library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
-
 # Base plot
 ggplot(
   data = mpg,
@@ -42,6 +41,15 @@ ggplot(
   theme(legend.position = "bottom")
 
 # Occasionally useful: vertical text at x axis
+## ggplot(
+##   data = mpg,
+##   mapping = aes(x = displ, y = hwy, color = class)
+## ) +
+##   geom_point() +
+##   theme_bw() +
+##   theme(........)
+
+# Easier with ggpubr package
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
@@ -49,7 +57,6 @@ ggplot(
   geom_point() +
   theme_bw() +
   ggpubr::rotate_x_text()
-# Easier with ggpubr package
 
 # theme_()-functions overwrite theme() if called afterwards
 ggplot(

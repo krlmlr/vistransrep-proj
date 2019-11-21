@@ -10,47 +10,33 @@ conflict_prefer("filter", "dplyr")
 flights %>%
   arrange(dep_time)
 
-# double arrange
+# lexicographically arranging two columns:
+# first column, resolve ties with the second column
 flights %>%
   arrange(dep_time, dep_delay)
 
-# double arrange view
-flights %>%
-  arrange(dep_time, dep_delay) %>%
-  view()
-
-# filter double arrange view
-flights %>%
-  filter(dep_time < 600) %>%
-  arrange(dep_time, dep_delay) %>%
-  view()
-
-# filter 2 double arrange view
+# filtering and arranging can be combined
 flights %>%
   filter(dep_time < 600) %>%
   filter(month >= 10) %>%
   arrange(dep_time, dep_delay) %>%
   view()
 
-# another filter arrange view
+# moving NA values to end
 flights %>%
   filter(month == 4) %>%
+  filter(day == 1) %>%
   arrange(is.na(dep_time)) %>%
   view()
 
-# another filter arrange
-flights %>%
-  filter(month == 4) %>%
-  arrange(!is.na(dep_time))
-
-# another 2 filters arrange view
+# moving NA values to start
 flights %>%
   filter(month == 4) %>%
   filter(day == 1) %>%
   arrange(!is.na(dep_time)) %>%
   view()
 
-# another 2 filters arrange arr time view
+# two filters then arrange according arr_time
 flights %>%
   filter(month == 4) %>%
   filter(day == 1) %>%

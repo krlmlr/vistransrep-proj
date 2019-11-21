@@ -1,3 +1,5 @@
+### Calculating expressions
+
 # R works like a calculator!
 1 + 2
 

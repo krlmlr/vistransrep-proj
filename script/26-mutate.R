@@ -31,11 +31,6 @@ recovery_data <-
 
 recovery_data
 
-# flights head view
-flights %>%
-  head() %>%
-  view()
-
 # flights filter select view
 flights %>%
   filter(tailnum == "N14228") %>%

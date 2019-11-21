@@ -6,19 +6,15 @@ library(nycflights13)
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 
-# select 1
+# select columns
 flights %>%
   select(year, month, day)
 
-# select 2
+# select a column away
 flights %>%
   select(-year)
 
-# select 3
-flights %>%
-  select(year, month, day, dep_delay, arr_delay)
-
-# select rename 1
+# select supports renaming
 flights %>%
   select(
     year, month, day,
@@ -26,7 +22,7 @@ flights %>%
     arrival_delay = arr_delay
   )
 
-# select rename with spaces
+# select + rename: create spaces (don't do this!)
 flights_with_spaces <-
   flights %>%
   select(
@@ -38,7 +34,7 @@ flights_with_spaces <-
     `Arrival delay` < 0
   )
 
-# select columns with spaces
+# select + rename columns with spaces
 flights_with_spaces %>%
   select(
     year, month, day,

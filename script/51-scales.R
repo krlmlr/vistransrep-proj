@@ -7,14 +7,12 @@ library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
-
 # Base plot
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
 ) +
   geom_point()
-
 
 # Add descriptive labels: the labs() function
 ggplot(
@@ -87,5 +85,9 @@ ggplot(
     "minivan" = "#FF5522",
     "pickup" = "#66FFFF",
     "subcompact" = "#FF0000",
-    "suv" = "#FF55FF"))
+    "suv" = "#FF55FF")
+  )
+
 # For "corporate design": ggthemr, https://github.com/cttobin/ggthemr
+## install.packages("devtools")
+## devtools::install_packages("cttobin/ggthemr")
