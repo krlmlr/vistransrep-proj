@@ -36,7 +36,7 @@ try(
     ..._join(...)
 )
 
-# How to turn off the message?
+# How to fix, and also turn off the message?
 try(
   ... %>%
     ..._join(..., ... = "...")
@@ -61,6 +61,7 @@ flights %>%
 # we have mismatches!
 flights %>%
   left_join(airports, by = c("dest" = "faa")) %>%
+  select(origin, dest, name) %>%
   filter(is.na(name))
 
 # what about the NA name?
@@ -85,7 +86,7 @@ try(
 try(
   ... %>%
     left_join(..., ... = "...") %>%
-    mutate(mismatch = is.na(...), is_aa = (carrier = "AA")) %>%
+    mutate(mismatch = is.na(...), is_aa = (carrier == "AA")) %>%
     count(.....)
 )
 
@@ -102,7 +103,7 @@ try(
 
 # Case study: classification of mismatches
 flights %>%
-  left_join(planes %>% select(tailnum, manufacturer)) %>%
+  left_join(planes %>% select(tailnum, manufacturer), by = "tailnum") %>%
   mutate(mismatch = is.na(manufacturer)) %>%
   select(-tailnum, -manufacturer) %>%
   rpart::rpart(mismatch ~ ., .)
