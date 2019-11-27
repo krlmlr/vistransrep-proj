@@ -43,7 +43,8 @@ Required software:
     ```r
     install.packages(c(
       "tidyverse", "nycflights13", "shiny", "here", "xaringan", "rticles", "conflicted",
-      "leaflet", "plotly", "pxR", "rio", "bookdown", "ggpubr"
+      "leaflet", "plotly", "pxR", "rio", "bookdown", "ggpubr",
+      "usethis"
     ))
     ```
 
