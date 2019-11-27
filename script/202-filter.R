@@ -6,17 +6,22 @@ library(nycflights13)
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 
-# example data
+# show example data
 flights
-?flights
+
+# access help for example data
+## ?flights
 
 # all filters are logical: numeric comparison
 flights %>%
   filter(dep_time < 600)
 
-# filter: logical result from function
+# filter: NA values
 flights %>%
   filter(is.na(dep_time))
+
+flights %>%
+  filter(is.na(dep_time - arr_time))
 
 # one AND the other
 flights %>%

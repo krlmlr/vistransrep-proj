@@ -1,4 +1,4 @@
-### Summarize data (by groups): `dplyr::summarize()`, `dplyr::group_by()` + `dplyr::ungroup()`
+### Summarize data `dplyr::ungroup()`
 
 library(tidyverse)
 library(nycflights13)

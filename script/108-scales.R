@@ -1,13 +1,10 @@
-### Plotting: custom labels and scales
+### Scales
 
 library(tidyverse)
-library(nycflights13)
+library(ggpubr)
+theme_set(theme_pubr())
 
-library(conflicted)
-conflict_prefer("filter", "dplyr")
-conflict_prefer("lag", "dplyr")
-
-# Base plot
+# Base plot to start with
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy, color = class)
@@ -47,37 +44,34 @@ ggplot(
   ) +
   scale_x_log10(name = "xxx")
 
-# Double log scale
-ggplot(
-  data = mpg,
-  mapping = aes(x = displ, y = hwy, color = class)
-) +
+# showcase manual axis scaling: limits, breaks, labels
+ggplot(mpg, aes(displ, hwy)) +
   geom_point() +
-  scale_x_log10() +
-  scale_y_log10()
+  scale_x_continuous(limits = c(2, 6), breaks = c(2, 4, 6))
 
-# Change color palette
+# default color palette
 ggplot(
   data = mpg,
-  mapping = aes(x = displ, y = hwy, color = class)
+  mapping = aes(x = displ, y = hwy)
 ) +
-  geom_point() +
-  scale_color_brewer(type = "qual")
+  geom_point(aes(color = class)) +
+  scale_color_hue()
 
-# Other options: viridis
+# show viridis color palette (discrete)
 ggplot(
   data = mpg,
-  mapping = aes(x = displ, y = hwy, color = class)
+  mapping = aes(x = displ, y = hwy)
 ) +
-  geom_point() +
-  scale_color_viridis_d(option = "B")
+  geom_point(aes(color = class)) +
+  scale_color_viridis_d()
 
-# Full control: manual scale
+# show how to set manual colors
+# useful for many discrete levels or levels with color meaning
 ggplot(
   data = mpg,
-  mapping = aes(x = displ, y = hwy, color = class)
+  mapping = aes(x = displ, y = hwy)
 ) +
-  geom_point() +
+  geom_point(aes(color = class)) +
   scale_color_manual(values = c(
     "2seater" = "#000000",
     "compact" = "#3355FF",
@@ -85,9 +79,12 @@ ggplot(
     "minivan" = "#FF5522",
     "pickup" = "#66FFFF",
     "subcompact" = "#FF0000",
-    "suv" = "#FF55FF")
-  )
+    "suv" = "#FF55FF"
+  ))
 
 # For "corporate design": ggthemr, https://github.com/cttobin/ggthemr
-## install.packages("devtools")
-## devtools::install_packages("cttobin/ggthemr")
+## install.packages("remotes")
+## remotes::install_github("cttobin/ggthemr")
+
+# Exercises
+browseURL("https://krlmlr.github.io/vistransrep/2019-11-zhr/scales.html")

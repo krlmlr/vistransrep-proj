@@ -3,7 +3,7 @@
 library(tidyverse)
 
 # # One time:
-# install.packages("tidyverse")
+# install.packages("tidyverse") OR install.packages("ggplot2")
 
 
 # Empty graph
@@ -12,7 +12,7 @@ ggplot(
   mapping = aes(x = displ, y = hwy)
 )
 
-# Scatterplot
+# visualize variables as points: scatterplot
 ggplot(
   data = mpg,
   mapping = aes(x = displ, y = hwy)

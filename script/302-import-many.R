@@ -8,6 +8,7 @@ library(here)
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 
+# List all files of interest
 files <- dir(path = here("data"), pattern = "[.]xlsx$", full.names = TRUE)
 files
 
@@ -34,7 +35,6 @@ try(
 all_tables <- bind_rows(list_of_tables, .id = "path")
 all_tables
 
-
 # Analyze one file
 all_tables %>%
   filter(path == "example6b") %>%
@@ -45,7 +45,6 @@ all_tables %>%
   group_by(path) %>%
   summarize(mean(col1), first(col2)) %>%
   ungroup()
-
 
 # Alternative: Import manually
 files %>%

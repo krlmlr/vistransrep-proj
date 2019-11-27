@@ -1,4 +1,4 @@
-### <No caption defined>
+### Joins
 
 library(tidyverse)
 library(nycflights13)
@@ -8,8 +8,6 @@ library(here)
 library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
-
-
 
 # `airlines` contain detailed information for each airline
 # (in this case only the name)
@@ -25,8 +23,6 @@ flights %>%
   left_join(airlines, by = "carrier") %>%
   select(dep_time, carrier, name)
 
-
-
 # Your turn: join the `planes` table
 planes
 
@@ -41,9 +37,6 @@ try(
   ... %>%
     ..._join(..., ... = "...")
 )
-
-
-
 
 # `airports` contain detailed information for each airport
 airports
@@ -73,8 +66,6 @@ flights %>%
   inner_join(airports, by = c("dest" = "faa")) %>%
   select(origin, dest, name)
 
-
-
 # Your turn: understand mismatches when joining the `planes` data
 try(
   ... %>%
@@ -96,21 +87,12 @@ try(
     ..._join(..., ... = "...")
 )
 
-
-
-
-
-
 # Case study: classification of mismatches
 flights %>%
   left_join(planes %>% select(tailnum, manufacturer), by = "tailnum") %>%
   mutate(mismatch = is.na(manufacturer)) %>%
   select(-tailnum, -manufacturer) %>%
   rpart::rpart(mismatch ~ ., .)
-
-
-
-
 
 # before joining, prepare the RHS table(s)
 origin_airports <-
@@ -137,11 +119,6 @@ flights %>%
   left_join(dest_airports, by = "dest") %>%
   select(origin, origin_name, dest, dest_name)
 
-
-
-
-
-
 # Your turn: we only need `engines` and `seats` from the `planes` table
 try({
   planes_join <-
@@ -152,10 +129,6 @@ try({
     left_join(..., ... = "...")
 })
 
-
-
-
-
 # either LHS or RHS should have a key as part of "by"
 airports %>%
   count(faa)
@@ -164,21 +137,12 @@ airports %>%
   count(faa) %>%
   count(n)
 
-
-
-
 # Your turn: double-check that `tailnum` is indeed a key in `planes`
 try(
   ... %>%
     count(...) %>%
     ...(...)
 )
-
-
-
-
-
-
 
 # create artificial dataset where airport is not a key
 dup_airports <-
@@ -221,11 +185,8 @@ try(
 # Explain!
 
 
-
-
-
-
 # A novel approach: https://krlmlr.github.io/dm/
+
 
 ##install.packages("devtools")
 ##devtools::install_github("krlmlr/dm")

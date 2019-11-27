@@ -1,14 +1,9 @@
-### <No caption defined>
+### Import single files
 
 library(tidyverse)
-library(nycflights13)
-
-library(conflicted)
-conflict_prefer("filter", "dplyr")
-conflict_prefer("lag", "dplyr")
-
-
 library(readr)
+
+# Import one single file
 example1 <-
   read_delim(
     "data/example1.csv",
@@ -16,4 +11,5 @@ example1 <-
     escape_double = FALSE, trim_ws = TRUE
   )
 
+# View the result
 view(example1)
