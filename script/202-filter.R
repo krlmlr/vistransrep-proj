@@ -1,4 +1,4 @@
-### Filtering: `dplyr::filter()`
+### Filtering
 
 library(tidyverse)
 library(nycflights13)

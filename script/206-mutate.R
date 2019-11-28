@@ -1,4 +1,4 @@
-### Create new columns based on old ones: `dplyr::mutate()`
+### Create new columns
 
 library(tidyverse)
 library(nycflights13)
@@ -7,22 +7,23 @@ library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 
-# mutate 1
-flights %>%
-  mutate(recovery = dep_delay - arr_delay)
-
-# mutate select
+# Compute new variables
 flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   select(dep_delay, arr_delay, recovery)
 
-# mutate select arrange
+# Work with new variables
 flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
   select(dep_delay, arr_delay, recovery) %>%
   arrange(recovery)
 
-# assign mutate select arrange
+# Assign to persist:
+try(
+  flights %>%
+  select(recovery)
+)
+
 recovery_data <-
   flights %>%
   mutate(recovery = dep_delay - arr_delay) %>%
@@ -37,29 +38,29 @@ flights %>%
   select(year, month, day, dep_time, arr_time) %>%
   view()
 
-# flights filter select mutate lead view
+# Lead values look across rows:
 flights %>%
   filter(tailnum == "N14228") %>%
   select(year, month, day, dep_time, arr_time) %>%
   mutate(lead_dep_time = lead(dep_time)) %>%
   view()
 
-# flights filter select mutate lag view
+# Lag: opposite of lead:
 flights %>%
   filter(tailnum == "N14228") %>%
   select(year, month, day, dep_time, arr_time) %>%
   mutate(lag_arr_time = lag(arr_time)) %>%
   view()
 
-# flights filter select mutate lag mutate ground time view
+# Compute absence time from NYC airports:
 flights %>%
   filter(tailnum == "N14228") %>%
-  select(year, month, day, dep_time, arr_time) %>%
-  mutate(lag_arr_time = lag(arr_time)) %>%
-  mutate(ground_time = dep_time - lag_arr_time) %>%
+  select(year, month, day, time_hour) %>%
+  mutate(lag_time_hour = lag(time_hour)) %>%
+  mutate(ground_time = time_hour - lag_time_hour) %>%
   view()
 
-# deselect with minus
+# Create helper, then deselect with `-`:
 flights %>%
   filter(tailnum == "N14228") %>%
   select(year, month, day, dep_time, arr_time) %>%
@@ -67,48 +68,34 @@ flights %>%
   mutate(ground_time = dep_time - lag_arr_time) %>%
   select(-lag_arr_time)
 
-# flights filter view
-flights %>%
-  filter(tailnum == "N14228") %>%
-  view()
-
-# air time N14228
+# Cumulative air time:
 flights %>%
   filter(tailnum == "N14228") %>%
   mutate(cum_air_time = cumsum(air_time)) %>%
   select(air_time, cum_air_time) %>%
   view()
 
-# delayed flag N14228
+# Verbose indicators:
 flights %>%
-  filter(tailnum == "N14228") %>%
   mutate(delayed = if_else(arr_delay > 0, "delayed", "on time")) %>%
   select(arr_delay, delayed)
 
-# delayed flag 2 N14228
+# Logical flags:
 flights %>%
-  filter(tailnum == "N14228") %>%
-  mutate(delayed = arr_delay > 0) %>%
+  mutate(delayed = (arr_delay > 0)) %>%
   select(arr_delay, delayed)
 
-# filter by flag
+# Filter by flag:
 flights %>%
-  filter(tailnum == "N14228") %>%
   mutate(delayed = arr_delay > 0) %>%
   select(arr_delay, delayed) %>%
   filter(delayed)
 
-# filter by flag inverse
-flights %>%
-  filter(tailnum == "N14228") %>%
-  mutate(delayed = arr_delay > 0) %>%
+# Negation, persistence:
+on_time_flights <-
+  flights %>%
+  mutate(delayed = (arr_delay > 0)) %>%
   select(arr_delay, delayed) %>%
   filter(!delayed)
 
-# on time flights
-on_time_flights <-
-  flights %>%
-  filter(tailnum == "N14228") %>%
-  mutate(delayed = arr_delay > 0) %>%
-  select(arr_delay, delayed) %>%
-  filter(!delayed)
+on_time_flights

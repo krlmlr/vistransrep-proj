@@ -64,8 +64,6 @@ flights %>%
   ) %>%
   ungroup()
 
-# FIXME: introduce count()?
-TRUE
-
-# FIXME: Copy mre examples from 27-summarize.R?
-TRUE
+# count() = group_by() + summarize() + ungroup()
+flights %>%
+  count(year, month, day)

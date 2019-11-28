@@ -1,4 +1,4 @@
-### Pick columns: `dplyr::select()`
+### Pick columns
 
 library(tidyverse)
 library(nycflights13)

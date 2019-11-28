@@ -1,4 +1,4 @@
-### Sort rows: `dplyr::arrange()`
+### Sorting
 
 library(tidyverse)
 library(nycflights13)
