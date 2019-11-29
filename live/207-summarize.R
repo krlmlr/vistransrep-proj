@@ -79,6 +79,8 @@ flights_by_day <-
   ) %>%
   ungroup()
 
+
+# Show monthly and daily aggregates in one plot
 flights_by_day <-
   flights %>%
   group_by(year, month, day) %>%
@@ -104,6 +106,7 @@ flights_by_day %>%
   geom_point(color = "green") +
   geom_smooth(color = "blue")
 
+# Analyze daily and monthly data in one group
 flights_overall <-
   bind_rows(flights_by_day, flights_by_month)
 
@@ -113,6 +116,8 @@ flights_overall %>%
   view()
 
 
+# Create a synthetic group for overall analysis
+# (careful with the interpretation!)
 flights_with_day_erased <-
   flights %>%
   mutate(day = NA)
@@ -130,15 +135,6 @@ flights_overall <-
     mean_air_time = mean(air_time, na.rm = TRUE)
   ) %>%
   ungroup()
-
-
-
-
-
-
-
-
-
 
 
 # Anonymous summarize for a quick glance
