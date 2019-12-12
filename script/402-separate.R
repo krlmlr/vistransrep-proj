@@ -17,6 +17,15 @@ table3 %>%
 table3 %>%
   separate(rate, into = c("cases", "population"), sep = "/", convert = TRUE)
 
+table3 %>%
+  separate(rate, into = c("cases", "population"), sep = "/", convert = TRUE) %>%
+  mutate(rate = cases / population)
+
+# Evaluate from expression given as text
+table3 %>%
+  mutate(rate_formula = as.list(parse(text = rate))) %>%
+  mutate(rate_value = map_dbl(rate_formula, eval))
+
 # Uniting
 table5
 

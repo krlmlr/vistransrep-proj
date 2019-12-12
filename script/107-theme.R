@@ -59,3 +59,7 @@ ggplot(
 ) +
   geom_point() +
   ggpubr::theme_pubr()
+
+# For "corporate design": ggthemr, https://github.com/cttobin/ggthemr
+## install.packages("remotes")
+## remotes::install_github("cttobin/ggthemr")

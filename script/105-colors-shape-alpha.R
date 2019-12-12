@@ -78,6 +78,16 @@ ggplot(
 ) +
   geom_point(alpha = 0.2)
 
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ,
+    y = hwy,
+    color = ..count..
+  )
+) +
+  geom_point(stat = "bin2d")
+
 # what can go wrong
 try(print(
   ggplot(

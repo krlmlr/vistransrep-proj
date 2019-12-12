@@ -13,6 +13,9 @@ conflict_prefer("lag", "dplyr")
 # (in this case only the name)
 airlines
 
+flights %>%
+  left_join(airlines)
+
 # `flights` can be augmented with this detailed information
 flights %>%
   left_join(airlines) %>%
@@ -178,7 +181,6 @@ weather %>%
 try(
   weather %>%
     count(...) %>%
-    add_count(...) %>%
     filter(...)
 )
 

@@ -21,15 +21,12 @@ list_of_tables <- rio::import_list(files, setclass = class(tibble()))
 list_of_tables
 
 # Access individual tables
-list_of_tables$example6b
+list_of_tables$example6c
 
 # Maybe tweak individual files?
-try(
-  list_of_tables$example6b <-
-    list_of_tables$example6b %>%
-    mutate(...) %>%
-    select(...)
-)
+list_of_tables$example6c <-
+  list_of_tables$example6c %>%
+  select(id, col1, col2, col3)
 
 # Combine into a single data frame
 all_tables <- bind_rows(list_of_tables, .id = "path")

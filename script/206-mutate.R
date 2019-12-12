@@ -32,6 +32,15 @@ recovery_data <-
 
 recovery_data
 
+recovery_data %>%
+  select(recovery)
+
+recovery_data %>%
+  mutate(rank = row_number())
+
+recovery_data %>%
+  mutate(rank = row_number(dep_delay))
+
 # flights filter select view
 flights %>%
   filter(tailnum == "N14228") %>%

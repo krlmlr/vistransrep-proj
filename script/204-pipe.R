@@ -58,6 +58,12 @@ flights %>%
 ##arrange(dep_time, dep_delay) %>%
 ##view()
 
+flights %>%
+  filter(dep_time < 600) %>%
+  filter(month >= 10) %>%
+  arrange(dep_time, dep_delay) %>%
+  view()
+
 # Remember to remove it!
 try(
   arrange(dep_time, dep_delay) %>%

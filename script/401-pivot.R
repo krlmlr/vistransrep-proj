@@ -17,7 +17,7 @@ table1 %>%
   summarize(
     max_cases = max(cases),
     max_population = max(population)
-  ) %>% 
+  ) %>%
   ungroup()
 
 # Iterate over columns:
@@ -26,7 +26,7 @@ table1 %>%
   summarize_at(
     vars(cases, population),
     max
-  ) %>% 
+  ) %>%
   ungroup()
 
 # In the longer form, this becomes a grouped operation:
@@ -34,7 +34,7 @@ table2 %>%
   group_by(country, type) %>%
   summarize(
     max = max(count)
-  ) %>% 
+  ) %>%
   ungroup()
 
 # Converting to longer form: pivot_longer()
@@ -117,6 +117,13 @@ table4
 table4 %>%
   pivot_longer(c(`1999`, `2000`))
 
+table4 %>%
+  pivot_longer(-c(type, country))
+
+table4 %>%
+  pivot_longer(-c(type, country)) %>%
+  mutate(name = as.integer(name))
+
 # WHO data
 who %>%
   view()
@@ -124,12 +131,15 @@ who %>%
 who_longer <-
   who %>%
   pivot_longer(
-    -(country:year),
+    -c(country, iso2, iso3, year),
     names_pattern = "([a-z_]+)_(.)([0-9]+)",
     names_to = c(".value", "sex", "age")
   )
 
 who_longer
+
+who_longer %>%
+  view()
 
 who_longer %>%
   count(sex, age)

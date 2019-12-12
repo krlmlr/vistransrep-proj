@@ -16,6 +16,10 @@ flights
 flights %>%
   filter(dep_time < 600)
 
+early_flights <-
+  flights %>%
+  filter(dep_time < 600)
+
 # filter: NA values
 flights %>%
   filter(is.na(dep_time))

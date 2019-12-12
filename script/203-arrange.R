@@ -15,6 +15,10 @@ flights %>%
 flights %>%
   arrange(dep_time, dep_delay)
 
+flights %>%
+  arrange(dep_time, dep_delay) %>%
+  view()
+
 # filtering and arranging can be combined
 flights %>%
   filter(dep_time < 600) %>%

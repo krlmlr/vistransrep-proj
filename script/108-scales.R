@@ -82,9 +82,28 @@ ggplot(
     "suv" = "#FF55FF"
   ))
 
-# For "corporate design": ggthemr, https://github.com/cttobin/ggthemr
-## install.packages("remotes")
-## remotes::install_github("cttobin/ggthemr")
+# Everything labeled correctly:
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, color = class)
+) +
+  labs(
+    x = "Displacement",
+    y = "Highway mileage\n[miles per gallon]",
+    color = "Car class",
+    title = "Highway mileages depending on displacement",
+    subtitle = "By car class"
+  ) +
+  geom_point() +
+  scale_color_discrete(labels = c(
+    "2seater" = "Two-seater",
+    "compact" = "Compact",
+    "midsize" = "Mid-size",
+    "minivan" = "Minivan",
+    "pickup" = "Pick-up",
+    "subcompact" = "Sub-compact",
+    "suv" = "SUV"
+  ))
 
 # Exercises
 browseURL("https://krlmlr.github.io/vistransrep/2019-11-zhr/scales.html")

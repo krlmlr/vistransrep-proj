@@ -10,6 +10,11 @@ ggplot(mpg, aes(x = hwy)) +
 ggplot(mpg, aes(x = hwy)) +
   geom_density()
 
+ggplot(mpg, aes(x = hwy)) +
+  geom_histogram() +
+  geom_density(aes(y = ..count..))
+asdf
+
 # example for discrete var: barplot
 ggplot(mpg, aes(fl)) +
   geom_bar()
