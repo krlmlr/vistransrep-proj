@@ -46,6 +46,7 @@ Required software:
       "leaflet", "plotly", "pxR", "rio", "bookdown", "ggpubr",
       "usethis"
     ))
+    update.packages(ask = FALSE, type = "binary")
     ```
 
 4. To test the installation, type `library(tidyverse)` (enter) in the console tab. You should see output similar to the following:
